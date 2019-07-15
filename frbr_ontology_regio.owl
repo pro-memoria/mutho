@@ -1,44 +1,44 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://purl.org/spar/frbr"
+     xml:base="https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://purl.org/spar/frbr"
-     versionIRI="http://purl.org/spar/frbr/opereonthology">
-    <Prefix name="" IRI="http://purl.org/spar/frbr"/>
+     ontologyIRI="https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio"
+     versionIRI="https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio">
+    <Prefix name="" IRI="https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="frbr" IRI="http://vocab.org/frbr/extended#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/2008/05/skos#"/>
     <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="opere" IRI="http://purl.org/spar/frbr/opereonthology#"/>
+    <Prefix name="theatre" IRI="http://lukeblaney.co.uk/semweb/theatre#"/>
     <Prefix name="wikidata" IRI="https://www.wikidata.org/wiki/"/>
-    <Prefix name="Opere Ontology" IRI="http://purl.org/spar/frbr/opereonthology#"/>
-    <Prefix name="Theatre Ontology" IRI="http://lukeblaney.co.uk/semweb/theatre#"/>
-    <Prefix name="Expression of Extended FRBR Concepts in RDF" IRI="http://vocab.org/frbr/extended#"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:contributor"/>
-        <Literal>David Shotton</Literal>
+        <Literal>Luca Montanera</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <Literal>Simone Cullino</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Paolo Ciccarese</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Silvio Peroni</Literal>
+        <Literal>Stefano Trinchero</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:date"/>
-        <Literal>2018-03-29</Literal>
+        <Literal>2019-07-15</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <Literal xml:lang="en">This vocabulary is an expression in OWL 2 DL of the basic concepts and relations described in the IFLA report on the Functional Requirements for Bibliographic Records (FRBR), also described in Ian Davis&apos;s RDF vocabulary (http://vocab.org/frbr/core).</Literal>
+        <Literal xml:lang="en">This vocabulary is an expression in OWL 2 DL of the basic concepts and relations existing in music and theatre topics.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:rights"/>
@@ -46,65 +46,34 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:title"/>
-        <Literal xml:lang="en">Essential FRBR in OWL2 DL</Literal>
+        <Literal xml:lang="en">Music and Theatre Ontology in OWL2</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal>The Essential FRBR in OWL2 DL Ontology (FRBR) is an expression in OWL 2 DL of the basic concepts and relations described in the IFLA report on the Functional Requirements for Bibliographic Records (FRBR), also described in Ian Davis&apos;s RDF vocabulary.
+        <Literal>This vocabulary is an expression in OWL 2 DL of the basic concepts and relations existing in music and theatre topics.
 
 **URL:** http://purl.org/spar/frbr
 
-**Creators**: [Paolo Ciccarese](http://orcid.org/0000-0002-5156-2703), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)
+**Creators**: Stefano Trinchero
 
-**Contributors:**: [David Shotton](http://orcid.org/0000-0001-5506-523X)
+**Contributors:**: Luca Montanera &amp; Simone Cullino, Angelo La Gorga, Andrea Calzolari
+**License:**
 
-**License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
-
-**Website:** http://www.sparontologies.net/ontologies/frbr</Literal>
+**Website:** https://github.com/pro-memoria/opereontology</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
-        <IRI>/2011-06-29</IRI>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal>Company : Promemoria S.R.L. &lt;https://www.promemoriagroup.com/it&gt;</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal>1.0.1</Literal>
     </Annotation>
     <Declaration>
-        <Class abbreviatedIRI="Theatre Ontology:Production"/>
+        <Class abbreviatedIRI="theatre:Production"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="Theatre Ontology:Season"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Building"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CharacterPortrayal"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Instrument"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Interpretation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Performance"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Place"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Role"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#act"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#part"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#track"/>
+        <Class abbreviatedIRI="theatre:Season"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://purl.org/vocab/frbr/core#Concept"/>
@@ -149,6 +118,36 @@
         <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CharacterPortrayal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Instrument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Interpretation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Performance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#act"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#part"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#track"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="https://schema.org/CreativeWork"/>
     </Declaration>
     <Declaration>
@@ -161,7 +160,157 @@
         <Class IRI="https://schema.org/character"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="Theatre Ontology:part_of_season"/>
+        <ObjectProperty abbreviatedIRI="theatre:part_of_season"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#abridgement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#abridgementOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#adaption"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#adaptionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#alternate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#alternateOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#arrangement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#arrangementOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#complement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#complementOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#creator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#creatorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodiment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodimentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#exemplar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#exemplarOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#imitation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#imitationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#owner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#ownerOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#producer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#producerOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizerOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reconfiguration"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reconfigurationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reproduction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reproductionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntityOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#revision"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#revisionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#subject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#subjectOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#successor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#successorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#summarization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#summarizationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#supplement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#supplementOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#transformation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#transformationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#translation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#translationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="frbr:isPartOfWork"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#characterInterpretation"/>
@@ -413,154 +562,7 @@
         <ObjectProperty IRI="#wasInterpretedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#abridgement"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#abridgementOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#adaption"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#adaptionOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#alternate"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#alternateOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#arrangement"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#arrangementOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#complement"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#complementOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#creator"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#creatorOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodiment"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodimentOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#exemplar"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#exemplarOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#imitation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#imitationOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#owner"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#ownerOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#part"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#producer"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#producerOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realization"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizationOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizer"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizerOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reconfiguration"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reconfigurationOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reproduction"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reproductionOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntity"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntityOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#revision"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#revisionOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#subject"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#subjectOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#successor"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#successorOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#summarization"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#summarizationOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#supplement"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#supplementOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#transformation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#transformationOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#translation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#translationOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Expression of Extended FRBR Concepts in RDF:isPartOfWork"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/title"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#dateOfFirstExecution"/>
@@ -603,9 +605,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#dc:title"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://xmlns.com/foaf/0.1/title"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="https://schema.org/additionalName"/>
@@ -776,20 +775,6 @@
         <AnnotationProperty abbreviatedIRI="skos:note"/>
     </Declaration>
     <EquivalentClasses>
-        <Class IRI="#CharacterPortrayal"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#interpretationIncludedIn"/>
-            <Class IRI="http://purl.org/vocab/frbr/core#Endeavour"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#CharacterPortrayal"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#interpretedCharacter"/>
-            <Class IRI="https://schema.org/character"/>
-        </ObjectExactCardinality>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="http://purl.org/vocab/frbr/core#CorporateBody"/>
         <Class IRI="http://xmlns.com/foaf/0.1/Organization"/>
     </EquivalentClasses>
@@ -825,7 +810,7 @@
                 <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
             </ObjectAllValuesFrom>
             <ObjectAllValuesFrom>
-                <ObjectProperty abbreviatedIRI="Expression of Extended FRBR Concepts in RDF:isPartOfWork"/>
+                <ObjectProperty abbreviatedIRI="frbr:isPartOfWork"/>
                 <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
             </ObjectAllValuesFrom>
         </ObjectIntersectionOf>
@@ -849,7 +834,7 @@
                 <Class IRI="http://purl.org/vocab/frbr/core#Item"/>
             </ObjectAllValuesFrom>
             <ObjectAllValuesFrom>
-                <ObjectProperty abbreviatedIRI="Expression of Extended FRBR Concepts in RDF:isPartOfWork"/>
+                <ObjectProperty abbreviatedIRI="frbr:isPartOfWork"/>
                 <Class IRI="http://purl.org/vocab/frbr/core#Item"/>
             </ObjectAllValuesFrom>
         </ObjectIntersectionOf>
@@ -877,7 +862,7 @@
                 <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
             </ObjectAllValuesFrom>
             <ObjectAllValuesFrom>
-                <ObjectProperty abbreviatedIRI="Expression of Extended FRBR Concepts in RDF:isPartOfWork"/>
+                <ObjectProperty abbreviatedIRI="frbr:isPartOfWork"/>
                 <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
             </ObjectAllValuesFrom>
         </ObjectIntersectionOf>
@@ -905,7 +890,7 @@
                 <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
             </ObjectAllValuesFrom>
             <ObjectAllValuesFrom>
-                <ObjectProperty abbreviatedIRI="Expression of Extended FRBR Concepts in RDF:isPartOfWork"/>
+                <ObjectProperty abbreviatedIRI="frbr:isPartOfWork"/>
                 <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
             </ObjectAllValuesFrom>
         </ObjectIntersectionOf>
@@ -922,9 +907,47 @@
         <Class IRI="http://xmlns.com/foaf/0.1/Organization"/>
         <Class IRI="https://schema.org/Organization"/>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CharacterPortrayal"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#interpretationIncludedIn"/>
+            <Class IRI="http://purl.org/vocab/frbr/core#Endeavour"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CharacterPortrayal"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#interpretedCharacter"/>
+            <Class IRI="https://schema.org/character"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
     <SubClassOf>
-        <Class abbreviatedIRI="Theatre Ontology:Production"/>
+        <Class abbreviatedIRI="theatre:Production"/>
         <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.org/vocab/frbr/core#Concept"/>
+        <Class IRI="http://purl.org/vocab/frbr/core#Subject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.org/vocab/frbr/core#CorporateBody"/>
+        <Class IRI="http://purl.org/vocab/frbr/core#ResponsibleEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.org/vocab/frbr/core#Object"/>
+        <Class IRI="http://purl.org/vocab/frbr/core#Subject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+        <Class IRI="http://purl.org/vocab/frbr/core#ResponsibleEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://xmlns.com/foaf/0.1/Organization"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Building"/>
@@ -957,30 +980,6 @@
     <SubClassOf>
         <Class IRI="#track"/>
         <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://purl.org/vocab/frbr/core#Concept"/>
-        <Class IRI="http://purl.org/vocab/frbr/core#Subject"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://purl.org/vocab/frbr/core#CorporateBody"/>
-        <Class IRI="http://purl.org/vocab/frbr/core#ResponsibleEntity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://purl.org/vocab/frbr/core#Object"/>
-        <Class IRI="http://purl.org/vocab/frbr/core#Subject"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
-        <Class IRI="http://purl.org/vocab/frbr/core#ResponsibleEntity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://xmlns.com/foaf/0.1/Organization"/>
-        <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
-        <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="https://schema.org/character"/>
@@ -1039,7 +1038,7 @@
         <NamedIndividual IRI="#Il_Trovatore"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Theatre Ontology:Production"/>
+        <Class abbreviatedIRI="theatre:Production"/>
         <NamedIndividual IRI="#Il_Trovatore_PROD_33889"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1115,7 +1114,7 @@
         <NamedIndividual IRI="#Torino"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Theatre Ontology:Season"/>
+        <Class abbreviatedIRI="theatre:Season"/>
         <NamedIndividual IRI="#Stagione_d&apos;Opera_e_di_Balletto_2018-2019"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
@@ -1149,6 +1148,16 @@
         <NamedIndividual IRI="#Salvadore_Cammarano"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizationOf"/>
+        <NamedIndividual IRI="#Il_Trovatore_PROD_33889"/>
+        <NamedIndividual IRI="#Il_Trovatore"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizer"/>
+        <NamedIndividual IRI="#Il_Trovatore_PROD_33889"/>
+        <NamedIndividual IRI="#Teatro_Comunale_Bologna"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDirector"/>
         <NamedIndividual IRI="#Il_Trovatore_PROD_33889"/>
         <NamedIndividual IRI="#Paul_Curran"/>
@@ -1164,14 +1173,9 @@
         <NamedIndividual IRI="#Kevin_Knight"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizationOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodimentOf"/>
+        <NamedIndividual IRI="#Il_Trovatore_RECI_6281"/>
         <NamedIndividual IRI="#Il_Trovatore_PROD_33889"/>
-        <NamedIndividual IRI="#Il_Trovatore"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizer"/>
-        <NamedIndividual IRI="#Il_Trovatore_PROD_33889"/>
-        <NamedIndividual IRI="#Teatro_Comunale_Bologna"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasBuildingOfPerformance"/>
@@ -1195,7 +1199,7 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodimentOf"/>
-        <NamedIndividual IRI="#Il_Trovatore_RECI_6281"/>
+        <NamedIndividual IRI="#Il_trovatore_RECI_6283"/>
         <NamedIndividual IRI="#Il_Trovatore_PROD_33889"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -1212,11 +1216,6 @@
         <ObjectProperty IRI="#hasPlaceOfPerformance"/>
         <NamedIndividual IRI="#Il_trovatore_RECI_6283"/>
         <NamedIndividual IRI="#Torino"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodimentOf"/>
-        <NamedIndividual IRI="#Il_trovatore_RECI_6283"/>
-        <NamedIndividual IRI="#Il_Trovatore_PROD_33889"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasComposer"/>
@@ -1299,14 +1298,14 @@
         <NamedIndividual IRI="#Il_Trovatore_PROD_33889"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#subtitle"/>
-        <NamedIndividual IRI="#Il_Trovatore"/>
-        <Literal>Dramma in 4 parti</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/title"/>
         <NamedIndividual IRI="#Il_Trovatore"/>
         <Literal>Il Trovatore (https://www.wikidata.org/wiki/Property:P1476)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#subtitle"/>
+        <NamedIndividual IRI="#Il_Trovatore"/>
+        <Literal>Dramma in 4 parti</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="https://schema.org/genre"/>
@@ -1359,8 +1358,200 @@
         <Literal>opera e balletto</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="Theatre Ontology:part_of_season"/>
+        <ObjectProperty abbreviatedIRI="theatre:part_of_season"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#abridgement"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#abridgementOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#adaption"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#adaptionOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#alternate"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#alternateOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#arrangement"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#arrangementOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#complement"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#complementOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#creator"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntity"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#creatorOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntityOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodiment"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodimentOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#exemplar"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#exemplarOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#imitation"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#imitationOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#owner"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntity"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#ownerOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntityOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#part"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#producer"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntity"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#producerOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntityOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realization"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizationOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizer"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntity"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizerOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntityOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reconfiguration"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reconfigurationOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reproduction"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reproductionOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntity"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntityOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#revision"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#revisionOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#subject"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#subjectOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#successor"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#successorOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#summarization"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#summarizationOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#supplement"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#supplementOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#transformation"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#transformationOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#translation"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#translationOf"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="frbr:isPartOfWork"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#characterInterpretation"/>
@@ -1686,201 +1877,105 @@
         <ObjectProperty IRI="#wasInterpretedBy"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#abridgement"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#abridgementOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#adaption"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#adaptionOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#alternate"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#alternateOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#arrangement"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#arrangementOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#complement"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#complementOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#creator"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntity"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#creatorOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntityOf"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodiment"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodimentOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#exemplar"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#exemplarOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#imitation"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#imitationOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#owner"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntity"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#ownerOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntityOf"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#part"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#producer"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntity"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#producerOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntityOf"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realization"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizationOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizer"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntity"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizerOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntityOf"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reconfiguration"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reconfigurationOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reproduction"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reproductionOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntity"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntityOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#revision"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#revisionOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#subject"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#subjectOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#successor"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#successorOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#summarization"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#summarizationOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#supplement"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#supplementOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#transformation"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#transformationOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#translation"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#translationOf"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="Expression of Extended FRBR Concepts in RDF:isPartOfWork"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty abbreviatedIRI="Theatre Ontology:part_of_season"/>
+        <ObjectProperty abbreviatedIRI="theatre:part_of_season"/>
         <ObjectProperty IRI="#seasonContains"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#abridgement"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#abridgementOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#adaption"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#adaptionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#alternate"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#alternateOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#arrangement"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#arrangementOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#complement"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#complementOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#creator"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#creatorOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodiment"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodimentOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#exemplar"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#exemplarOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#imitation"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#imitationOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#owner"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#ownerOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#part"/>
+        <ObjectProperty abbreviatedIRI="frbr:isPartOfWork"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#producer"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#producerOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realization"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizationOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizer"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizerOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reconfiguration"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reconfigurationOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reproduction"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reproductionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntity"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntityOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#revision"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#revisionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#subject"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#subjectOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#successor"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#successorOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#summarization"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#summarizationOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#supplement"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#supplementOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#transformation"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#transformationOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#translation"/>
+        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#translationOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#characterInterpretation"/>
@@ -2010,102 +2105,6 @@
         <ObjectProperty IRI="#includesInterpretation"/>
         <ObjectProperty IRI="#interpretationIncludedIn"/>
     </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#abridgement"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#abridgementOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#adaption"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#adaptionOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#alternate"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#alternateOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#arrangement"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#arrangementOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#complement"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#complementOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#creator"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#creatorOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodiment"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodimentOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#exemplar"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#exemplarOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#imitation"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#imitationOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#owner"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#ownerOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#part"/>
-        <ObjectProperty abbreviatedIRI="Expression of Extended FRBR Concepts in RDF:isPartOfWork"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#producer"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#producerOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realization"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizationOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizer"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizerOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reconfiguration"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reconfigurationOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reproduction"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#reproductionOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntity"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntityOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#revision"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#revisionOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#subject"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#subjectOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#successor"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#successorOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#summarization"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#summarizationOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#supplement"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#supplementOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#transformation"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#transformationOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#translation"/>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#translationOf"/>
-    </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#exemplarOf"/>
     </FunctionalObjectProperty>
@@ -2116,97 +2115,8 @@
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#part"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty abbreviatedIRI="Expression of Extended FRBR Concepts in RDF:isPartOfWork"/>
+        <ObjectProperty abbreviatedIRI="frbr:isPartOfWork"/>
     </TransitiveObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#characterInterpretation"/>
-        <Class IRI="https://schema.org/character"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#characterIsPlayedBy"/>
-        <Class IRI="#CharacterPortrayal"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#expressionComposer"/>
-        <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasBaritone"/>
-        <ObjectUnionOf>
-            <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
-            <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
-        </ObjectUnionOf>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasCharacter"/>
-        <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasCharacterPortrayal"/>
-        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasManifestationEmbodiment"/>
-        <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasRelatedPerformance"/>
-        <Class IRI="#Performance"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#includesInterpretation"/>
-        <ObjectUnionOf>
-            <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
-            <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
-        </ObjectUnionOf>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#interpretationIncludedIn"/>
-        <Class IRI="#Interpretation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#interpretedCharacter"/>
-        <Class IRI="#CharacterPortrayal"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isBaritoneIn"/>
-        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isFirstPerformance"/>
-        <ObjectUnionOf>
-            <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
-            <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
-        </ObjectUnionOf>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isMezzosopranoIn"/>
-        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isPlaceOfPerformance"/>
-        <Class IRI="#Place"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isSopranoIn"/>
-        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isWorkEmbodimentOf"/>
-        <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#manifestationComposer"/>
-        <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#seasonContains"/>
-        <Class abbreviatedIRI="Theatre Ontology:Season"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#wasInterpretedBy"/>
-        <Class IRI="https://schema.org/character"/>
-    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#abridgement"/>
         <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
@@ -2331,67 +2241,95 @@
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#translation"/>
         <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#characterIsPlayedBy"/>
-        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasBaritone"/>
-        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasCharacter"/>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#characterInterpretation"/>
         <Class IRI="https://schema.org/character"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#characterIsPlayedBy"/>
+        <Class IRI="#CharacterPortrayal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#expressionComposer"/>
+        <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBaritone"/>
+        <ObjectUnionOf>
+            <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
+            <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCharacterPortrayal"/>
-        <Class IRI="#Interpretation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
+        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasManifestationEmbodiment"/>
-        <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
+        <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasRelatedPerformance"/>
         <Class IRI="#Performance"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#includesInterpretation"/>
-        <Class IRI="#Interpretation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
+        <ObjectUnionOf>
+            <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
+            <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#interpretationIncludedIn"/>
-        <Class IRI="http://purl.org/vocab/frbr/core#Endeavour"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
+        <Class IRI="#Interpretation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#interpretedCharacter"/>
-        <Class IRI="https://schema.org/character"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
+        <Class IRI="#CharacterPortrayal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isBaritoneIn"/>
+        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isFirstPerformance"/>
         <ObjectUnionOf>
             <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
             <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
         </ObjectUnionOf>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isMezzosopranoIn"/>
+        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isPlaceOfPerformance"/>
-        <ObjectUnionOf>
-            <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
-            <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
-        </ObjectUnionOf>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
+        <Class IRI="#Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSopranoIn"/>
+        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isWorkEmbodimentOf"/>
-        <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
+        <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#manifestationComposer"/>
+        <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#seasonContains"/>
-        <ObjectUnionOf>
-            <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
-            <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
-        </ObjectUnionOf>
-    </ObjectPropertyRange>
+        <Class abbreviatedIRI="theatre:Season"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#wasInterpretedBy"/>
+        <Class IRI="https://schema.org/character"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#abridgement"/>
         <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
@@ -2515,6 +2453,88 @@
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#translation"/>
         <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
     </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#characterIsPlayedBy"/>
+        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBaritone"/>
+        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <Class IRI="https://schema.org/character"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCharacterPortrayal"/>
+        <Class IRI="#Interpretation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasManifestationEmbodiment"/>
+        <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRelatedPerformance"/>
+        <Class IRI="#Performance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includesInterpretation"/>
+        <Class IRI="#Interpretation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#interpretationIncludedIn"/>
+        <Class IRI="http://purl.org/vocab/frbr/core#Endeavour"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#interpretedCharacter"/>
+        <Class IRI="https://schema.org/character"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isFirstPerformance"/>
+        <ObjectUnionOf>
+            <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
+            <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isPlaceOfPerformance"/>
+        <ObjectUnionOf>
+            <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
+            <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isWorkEmbodimentOf"/>
+        <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#seasonContains"/>
+        <ObjectUnionOf>
+            <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
+            <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodimentOf"/>
+            <ObjectProperty abbreviatedIRI="theatre:part_of_season"/>
+        </ObjectPropertyChain>
+        <ObjectProperty abbreviatedIRI="theatre:part_of_season"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodimentOf"/>
+            <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizationOf"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#isWorkEmbodimentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizationOf"/>
+            <ObjectProperty IRI="#hasComposer"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#expressionComposer"/>
+    </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectPropertyChain>
             <ObjectProperty IRI="#characterInterpretation"/>
@@ -2535,27 +2555,6 @@
             <ObjectProperty IRI="#hasComposer"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#manifestationComposer"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectPropertyChain>
-            <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodimentOf"/>
-            <ObjectProperty abbreviatedIRI="Theatre Ontology:part_of_season"/>
-        </ObjectPropertyChain>
-        <ObjectProperty abbreviatedIRI="Theatre Ontology:part_of_season"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectPropertyChain>
-            <ObjectProperty IRI="http://purl.org/vocab/frbr/core#embodimentOf"/>
-            <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizationOf"/>
-        </ObjectPropertyChain>
-        <ObjectProperty IRI="#isWorkEmbodimentOf"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectPropertyChain>
-            <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizationOf"/>
-            <ObjectProperty IRI="#hasComposer"/>
-        </ObjectPropertyChain>
-        <ObjectProperty IRI="#expressionComposer"/>
     </SubObjectPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#dateOfFirstExecution"/>
@@ -2982,565 +2981,8 @@
     </DLSafeRule>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>Theatre Ontology:part_of_season</AbbreviatedIRI>
+        <AbbreviatedIRI>theatre:part_of_season</AbbreviatedIRI>
         <Literal>is part of season</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#CharacterPortrayal</IRI>
-        <Literal xml:lang="en">Use this class to describe the interpretation of a character by a person in a manifestation or expression</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#CharacterPortrayal</IRI>
-        <Literal>character portrayal</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <IRI>#Il_Trovatore</IRI>
-        <IRI>http://archivi.teatroregio.torino.it/oggetti/?id=392</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:note"/>
-        <IRI>#Il_Trovatore</IRI>
-        <Literal>Per la gestione dei titoli delle opere sarebbe necessario prendere il titolo da Wikidata, in modo da avere uniformità.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <IRI>#Il_Trovatore_PROD_33889</IRI>
-        <IRI>http://archivi.teatroregio.torino.it/oggetti/?id=33889&amp;b=search</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <IRI>#La_Traviata</IRI>
-        <IRI>http://archivi.teatroregio.torino.it/oggetti/?id=523</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <IRI>#Salvadore_Cammarano</IRI>
-        <IRI>http://archivi.teatroregio.torino.it/backoffice/index.php/editor/entities/EntityEditor/Edit/Screen48/entity_id/23297</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#characterInterpretation</IRI>
-        <Literal>Defines a link between a character and the interpretation of that character by an actor or singer (Character portrayal).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#characterInterpretation</IRI>
-        <Literal>character interpretation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#characterIsPlayedBy</IRI>
-        <Literal>character played by</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#dateOfFirstExecution</IRI>
-        <Literal>date of first execution</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#dateOfPerformance</IRI>
-        <Literal>date of performance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#expressionComposer</IRI>
-        <Literal>expression composer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasActor</IRI>
-        <Literal>has actor</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasAssistantDirector</IRI>
-        <Literal>has assistant director</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasAuthorOfTheLiteraryWork</IRI>
-        <Literal>has author of the literary work</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasBaritone</IRI>
-        <Literal>has baritone</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasBass</IRI>
-        <Literal>has bass</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasBuildingOfFirstPerformance</IRI>
-        <Literal>Defines the venue where the first performance of a production/expression took place.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasBuildingOfFirstPerformance</IRI>
-        <Literal>has building of first performance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasBuildingOfPerformance</IRI>
-        <Literal>Defines the venue of the performance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasBuildingOfPerformance</IRI>
-        <Literal>has building of performance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasCharacter</IRI>
-        <Literal>has character</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasCharacterPortrayal</IRI>
-        <Literal>This property establishes a link between a person and an interpretation.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasCharacterPortrayal</IRI>
-        <Literal>has character portrayal</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasChoreographer</IRI>
-        <Literal>has choreographer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasChorus</IRI>
-        <Literal>has chorus</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasChorusMaster</IRI>
-        <Literal>has chorus master</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasComposer</IRI>
-        <Literal>has composer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasConductor</IRI>
-        <Literal>has conductor</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasContralto</IRI>
-        <Literal>has contralto</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasCostumeTailoring</IRI>
-        <Literal>has costumes tailoring</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasCostumesDesigner</IRI>
-        <Literal>has costumes designer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasCountertenor</IRI>
-        <Literal>has countertenor</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasDirector</IRI>
-        <Literal>has director</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasEquipmentSupplier</IRI>
-        <Literal>has equipment supplier</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasFirstPerformance</IRI>
-        <Literal>has first performance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasIntepreter</IRI>
-        <Literal>has interpreter</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasInterpreted</IRI>
-        <Literal>has interpreted</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasLibrettist</IRI>
-        <Literal>has librettist</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasLightingDesigner</IRI>
-        <Literal>has lighting designer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasManifestationEmbodiment</IRI>
-        <Literal>has manifestation 
-embodiment</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasMezzosoprano</IRI>
-        <Literal>has mezzosoprano</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasMusician</IRI>
-        <Literal>has musician</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasOrchestra</IRI>
-        <Literal>has orchestra</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasPlaceOfFirstPerformance</IRI>
-        <Literal>Defines the place where the first performance of a production/expression took place.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasPlaceOfFirstPerformance</IRI>
-        <Literal>has place of first performance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasPlaceOfPerformance</IRI>
-        <Literal>Defines the place (city) where the performance took place.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasPlaceOfPerformance</IRI>
-        <Literal>has place of performance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasRelatedPerformance</IRI>
-        <Literal>has related performance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasSetDesigner</IRI>
-        <Literal>has set designer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasShoesManifacturer</IRI>
-        <Literal>has shoes manifacturer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasSoprano</IRI>
-        <Literal>has soprano</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasTenor</IRI>
-        <Literal>has tenor</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasWigsSupplier</IRI>
-        <Literal>has wigs supplier</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#includesInterpretation</IRI>
-        <Literal>Refers to an interpretation (for example a Character portrayal) included in a performance.
-
-Example:
-If Leo Nucci interpreted Il Conte di Luna in a performance of Il Trovatore, such performance &quot;includes intepretation&quot; &quot;Leo Nucci as Il Conte di Luna&quot;.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#interpretationIncludedIn</IRI>
-        <Literal>interpretation included in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#interpretedCharacter</IRI>
-        <Literal>interpreted character</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isActorIn</IRI>
-        <Literal>is actor in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isAssistantDirectorOf</IRI>
-        <Literal>is assistant director of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isAuthorOf</IRI>
-        <Literal>is author of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isAuthorOf</IRI>
-        <Literal>is author of the literary work</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isBaritoneIn</IRI>
-        <Literal>is baritone in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isBassIn</IRI>
-        <Literal>is bass in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isBuildingOfFirstPerformance</IRI>
-        <Literal>is building of first performance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isBuildingOfPerformance</IRI>
-        <Literal>is building of performance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isCharacterOf</IRI>
-        <Literal>is charachter of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isChoreographerOf</IRI>
-        <Literal>is choreographer of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isChorusMaster</IRI>
-        <Literal>is chorus master</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isChorusOf</IRI>
-        <Literal>is chorus of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isComposerOf</IRI>
-        <Literal>is composer of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isConductorOf</IRI>
-        <Literal>is conductor of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isContraltoIn</IRI>
-        <Literal>is coltralto in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isCostumeTailoringOf</IRI>
-        <Literal>is costume tailoring of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isCostumesDesignerOf</IRI>
-        <Literal>is costume designer of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isCountertenorIn</IRI>
-        <Literal>is countertenor in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isDirectorOf</IRI>
-        <Literal>is director of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isEquipmentSupplier</IRI>
-        <Literal>is equipment supplier</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isFirstPerformance</IRI>
-        <Literal>is first performance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isIntepreterIn</IRI>
-        <Literal>is interpreter in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isLibrettistOf</IRI>
-        <Literal>is librettist of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isLightingDesignerOf</IRI>
-        <Literal>is lighting designer of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isMezzosopranoIn</IRI>
-        <Literal>is mezzosoprano in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isMusician</IRI>
-        <Literal>is musician in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isOrchestraOf</IRI>
-        <Literal>is orchestra of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isPlaceOfFirstPerformance</IRI>
-        <Literal>is place of first performance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isPlaceOfPerformance</IRI>
-        <Literal>is place of performance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isSetDesignerOf</IRI>
-        <Literal>is set designer of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isShoesManifacturerOf</IRI>
-        <Literal>is shoes manifacturer of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isSopranoIn</IRI>
-        <Literal>is soprano in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isSponsorOf</IRI>
-        <Literal>is sponsor of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isTenorIn</IRI>
-        <Literal>is tenor in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isWigsSupplier</IRI>
-        <Literal>is wigs supplier</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isWorkEmbodimentOf</IRI>
-        <Literal>is work embodiment of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#manifestationComposer</IRI>
-        <Literal>Subproperty used to connect the name of the composer of the work to the manifestation derived from that work</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#manifestationComposer</IRI>
-        <Literal>manifestation composer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#originalDate</IRI>
-        <Literal>original date</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#original_title</IRI>
-        <Literal>original title</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#other_title</IRI>
-        <Literal>other title</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#playedCharacterIn</IRI>
-        <Literal>played character in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#productionType</IRI>
-        <Literal>production type</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#seasonContains</IRI>
-        <Literal>Defines when a season contains a production or a performance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#seasonContains</IRI>
-        <Literal>season contains</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#sortNumber</IRI>
-        <Literal>Qualifies the sort order of a production inside a season, or a performance inside a production
-
-For example:
-The opening night of a production would be number 1.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#sortNumber</IRI>
-        <Literal>sorting number</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#timeOfPerformance</IRI>
-        <Literal>time of performance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#title_reproduction</IRI>
-        <Literal>title reproduction</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#title_translation</IRI>
-        <Literal>title translation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#wasInterpretedBy</IRI>
-        <Literal>was interpreted by</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Stagione_d&apos;Opera_e_di_Balletto_2018-2019</IRI>
-        <Literal>Stagione d&apos;opera e di balletto 2018-2019</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4166,17 +3608,17 @@ It allows to refer to a literal translation, in which the intent is to render th
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>Expression of Extended FRBR Concepts in RDF:isPartOfWork</AbbreviatedIRI>
+        <AbbreviatedIRI>frbr:isPartOfWork</AbbreviatedIRI>
         <Literal xml:lang="en">An endeavour incorporating another endeavour.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>Expression of Extended FRBR Concepts in RDF:isPartOfWork</AbbreviatedIRI>
+        <AbbreviatedIRI>frbr:isPartOfWork</AbbreviatedIRI>
         <Literal xml:lang="en">is part of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:note"/>
-        <AbbreviatedIRI>Expression of Extended FRBR Concepts in RDF:isPartOfWork</AbbreviatedIRI>
+        <AbbreviatedIRI>frbr:isPartOfWork</AbbreviatedIRI>
         <Literal xml:lang="en">Unlike the FRBR version in RDF http://vocab.org/frbr/core.html the present version defines partonomy relationships transitive.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -4198,6 +3640,563 @@ It allows to refer to a literal translation, in which the intent is to render th
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://xmlns.com/foaf/0.1/Person</IRI>
         <Literal>Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CharacterPortrayal</IRI>
+        <Literal xml:lang="en">Use this class to describe the interpretation of a character by a person in a manifestation or expression</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CharacterPortrayal</IRI>
+        <Literal>character portrayal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#Il_Trovatore</IRI>
+        <IRI>http://archivi.teatroregio.torino.it/oggetti/?id=392</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>#Il_Trovatore</IRI>
+        <Literal>Per la gestione dei titoli delle opere sarebbe necessario prendere il titolo da Wikidata, in modo da avere uniformità.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#Il_Trovatore_PROD_33889</IRI>
+        <IRI>http://archivi.teatroregio.torino.it/oggetti/?id=33889&amp;b=search</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#La_Traviata</IRI>
+        <IRI>http://archivi.teatroregio.torino.it/oggetti/?id=523</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#Salvadore_Cammarano</IRI>
+        <IRI>http://archivi.teatroregio.torino.it/backoffice/index.php/editor/entities/EntityEditor/Edit/Screen48/entity_id/23297</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#characterInterpretation</IRI>
+        <Literal>Defines a link between a character and the interpretation of that character by an actor or singer (Character portrayal).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#characterInterpretation</IRI>
+        <Literal>character interpretation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#characterIsPlayedBy</IRI>
+        <Literal>character played by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dateOfFirstExecution</IRI>
+        <Literal>date of first execution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dateOfPerformance</IRI>
+        <Literal>date of performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#expressionComposer</IRI>
+        <Literal>expression composer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasActor</IRI>
+        <Literal>has actor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAssistantDirector</IRI>
+        <Literal>has assistant director</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAuthorOfTheLiteraryWork</IRI>
+        <Literal>has author of the literary work</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBaritone</IRI>
+        <Literal>has baritone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBass</IRI>
+        <Literal>has bass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasBuildingOfFirstPerformance</IRI>
+        <Literal>Defines the venue where the first performance of a production/expression took place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBuildingOfFirstPerformance</IRI>
+        <Literal>has building of first performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasBuildingOfPerformance</IRI>
+        <Literal>Defines the venue of the performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBuildingOfPerformance</IRI>
+        <Literal>has building of performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCharacter</IRI>
+        <Literal>has character</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCharacterPortrayal</IRI>
+        <Literal>This property establishes a link between a person and an interpretation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCharacterPortrayal</IRI>
+        <Literal>has character portrayal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasChoreographer</IRI>
+        <Literal>has choreographer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasChorus</IRI>
+        <Literal>has chorus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasChorusMaster</IRI>
+        <Literal>has chorus master</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasComposer</IRI>
+        <Literal>has composer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasConductor</IRI>
+        <Literal>has conductor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasContralto</IRI>
+        <Literal>has contralto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCostumeTailoring</IRI>
+        <Literal>has costumes tailoring</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCostumesDesigner</IRI>
+        <Literal>has costumes designer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCountertenor</IRI>
+        <Literal>has countertenor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDirector</IRI>
+        <Literal>has director</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEquipmentSupplier</IRI>
+        <Literal>has equipment supplier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFirstPerformance</IRI>
+        <Literal>has first performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasIntepreter</IRI>
+        <Literal>has interpreter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasInterpreted</IRI>
+        <Literal>has interpreted</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLibrettist</IRI>
+        <Literal>has librettist</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLightingDesigner</IRI>
+        <Literal>has lighting designer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasManifestationEmbodiment</IRI>
+        <Literal>has manifestation 
+embodiment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMezzosoprano</IRI>
+        <Literal>has mezzosoprano</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMusician</IRI>
+        <Literal>has musician</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOrchestra</IRI>
+        <Literal>has orchestra</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasPlaceOfFirstPerformance</IRI>
+        <Literal>Defines the place where the first performance of a production/expression took place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPlaceOfFirstPerformance</IRI>
+        <Literal>has place of first performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasPlaceOfPerformance</IRI>
+        <Literal>Defines the place (city) where the performance took place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPlaceOfPerformance</IRI>
+        <Literal>has place of performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRelatedPerformance</IRI>
+        <Literal>has related performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSetDesigner</IRI>
+        <Literal>has set designer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasShoesManifacturer</IRI>
+        <Literal>has shoes manifacturer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSoprano</IRI>
+        <Literal>has soprano</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTenor</IRI>
+        <Literal>has tenor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasWigsSupplier</IRI>
+        <Literal>has wigs supplier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#includesInterpretation</IRI>
+        <Literal>Refers to an interpretation (for example a Character portrayal) included in a performance.
+
+Example:
+If Leo Nucci interpreted Il Conte di Luna in a performance of Il Trovatore, such performance &quot;includes intepretation&quot; &quot;Leo Nucci as Il Conte di Luna&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interpretationIncludedIn</IRI>
+        <Literal>interpretation included in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interpretedCharacter</IRI>
+        <Literal>interpreted character</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isActorIn</IRI>
+        <Literal>is actor in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isAssistantDirectorOf</IRI>
+        <Literal>is assistant director of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isAuthorOf</IRI>
+        <Literal>is author of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isAuthorOf</IRI>
+        <Literal>is author of the literary work</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isBaritoneIn</IRI>
+        <Literal>is baritone in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isBassIn</IRI>
+        <Literal>is bass in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isBuildingOfFirstPerformance</IRI>
+        <Literal>is building of first performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isBuildingOfPerformance</IRI>
+        <Literal>is building of performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isCharacterOf</IRI>
+        <Literal>is charachter of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isChoreographerOf</IRI>
+        <Literal>is choreographer of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isChorusMaster</IRI>
+        <Literal>is chorus master</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isChorusOf</IRI>
+        <Literal>is chorus of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isComposerOf</IRI>
+        <Literal>is composer of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isConductorOf</IRI>
+        <Literal>is conductor of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isContraltoIn</IRI>
+        <Literal>is coltralto in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isCostumeTailoringOf</IRI>
+        <Literal>is costume tailoring of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isCostumesDesignerOf</IRI>
+        <Literal>is costume designer of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isCountertenorIn</IRI>
+        <Literal>is countertenor in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isDirectorOf</IRI>
+        <Literal>is director of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isEquipmentSupplier</IRI>
+        <Literal>is equipment supplier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isFirstPerformance</IRI>
+        <Literal>is first performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isIntepreterIn</IRI>
+        <Literal>is interpreter in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isLibrettistOf</IRI>
+        <Literal>is librettist of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isLightingDesignerOf</IRI>
+        <Literal>is lighting designer of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isMezzosopranoIn</IRI>
+        <Literal>is mezzosoprano in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isMusician</IRI>
+        <Literal>is musician in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isOrchestraOf</IRI>
+        <Literal>is orchestra of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isPlaceOfFirstPerformance</IRI>
+        <Literal>is place of first performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isPlaceOfPerformance</IRI>
+        <Literal>is place of performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isSetDesignerOf</IRI>
+        <Literal>is set designer of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isShoesManifacturerOf</IRI>
+        <Literal>is shoes manifacturer of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isSopranoIn</IRI>
+        <Literal>is soprano in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isSponsorOf</IRI>
+        <Literal>is sponsor of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isTenorIn</IRI>
+        <Literal>is tenor in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isWigsSupplier</IRI>
+        <Literal>is wigs supplier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isWorkEmbodimentOf</IRI>
+        <Literal>is work embodiment of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#manifestationComposer</IRI>
+        <Literal>Subproperty used to connect the name of the composer of the work to the manifestation derived from that work</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#manifestationComposer</IRI>
+        <Literal>manifestation composer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#originalDate</IRI>
+        <Literal>original date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#original_title</IRI>
+        <Literal>original title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#other_title</IRI>
+        <Literal>other title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#playedCharacterIn</IRI>
+        <Literal>played character in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#productionType</IRI>
+        <Literal>production type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#seasonContains</IRI>
+        <Literal>Defines when a season contains a production or a performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#seasonContains</IRI>
+        <Literal>season contains</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sortNumber</IRI>
+        <Literal>Qualifies the sort order of a production inside a season, or a performance inside a production
+
+For example:
+The opening night of a production would be number 1.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sortNumber</IRI>
+        <Literal>sorting number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#timeOfPerformance</IRI>
+        <Literal>time of performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#title_reproduction</IRI>
+        <Literal>title reproduction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#title_translation</IRI>
+        <Literal>title translation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#wasInterpretedBy</IRI>
+        <Literal>was interpreted by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Stagione_d&apos;Opera_e_di_Balletto_2018-2019</IRI>
+        <Literal>Stagione d&apos;opera e di balletto 2018-2019</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4273,5 +4272,5 @@ It allows to refer to a literal translation, in which the intent is to render th
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
 
