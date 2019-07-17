@@ -22,23 +22,23 @@
     <Prefix name="wikidata" IRI="https://www.wikidata.org/wiki/"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:contributor"/>
-        <Literal>Luca Montanera</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
-        <Literal>Simone Cullino</Literal>
+        <Literal>David Shotton</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Stefano Trinchero</Literal>
+        <Literal>Paolo Ciccarese</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Silvio Peroni</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:date"/>
-        <Literal>2019-07-15</Literal>
+        <Literal>2018-03-29</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <Literal xml:lang="en">This vocabulary is an expression in OWL 2 DL of the basic concepts and relations existing in music and theatre topics.</Literal>
+        <Literal xml:lang="en">This vocabulary is an expression in OWL 2 DL of the basic concepts and relations described in the IFLA report on the Functional Requirements for Bibliographic Records (FRBR), also described in Ian Davis&apos;s RDF vocabulary (http://vocab.org/frbr/core).</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:rights"/>
@@ -46,24 +46,25 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:title"/>
-        <Literal xml:lang="en">Music and Theatre Ontology in OWL2</Literal>
+        <Literal xml:lang="en">Essential FRBR in OWL2 DL</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal>This vocabulary is an expression in OWL 2 DL of the basic concepts and relations existing in music and theatre topics.
+        <Literal>The Essential FRBR in OWL2 DL Ontology (FRBR) is an expression in OWL 2 DL of the basic concepts and relations described in the IFLA report on the Functional Requirements for Bibliographic Records (FRBR), also described in Ian Davis&apos;s RDF vocabulary.
 
 **URL:** http://purl.org/spar/frbr
 
-**Creators**: Stefano Trinchero
+**Creators**: [Paolo Ciccarese](http://orcid.org/0000-0002-5156-2703), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)
 
-**Contributors:**: Luca Montanera &amp; Simone Cullino, Angelo La Gorga, Andrea Calzolari
-**License:**
+**Contributors:**: [David Shotton](http://orcid.org/0000-0001-5506-523X)
 
-**Website:** https://github.com/pro-memoria/opereontology</Literal>
+**License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+**Website:** http://www.sparontologies.net/ontologies/frbr</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <Literal>Company : Promemoria S.R.L. &lt;https://www.promemoriagroup.com/it&gt;</Literal>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <IRI>http://purl.org/spar/frbr/2011-06-29</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
@@ -308,9 +309,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="frbr:isPartOfWork"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#characterInterpretation"/>
@@ -562,6 +560,12 @@
         <ObjectProperty IRI="#wasInterpretedBy"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="http://xmlns.com/foaf/0.1/title"/>
     </Declaration>
     <Declaration>
@@ -599,12 +603,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#title_translation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#dc:date"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#dc:title"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="https://schema.org/additionalName"/>
@@ -1348,7 +1346,7 @@
         <Literal>Castiglione dei Pepoli</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#dc:title"/>
+        <DataProperty abbreviatedIRI="dc:title"/>
         <NamedIndividual IRI="#Stagione_d&apos;Opera_e_di_Balletto_2018-2019"/>
         <Literal>Stagione d&apos;opera e di balletto 2018-2019</Literal>
     </DataPropertyAssertion>
@@ -1357,10 +1355,6 @@
         <NamedIndividual IRI="#Stagione_d&apos;Opera_e_di_Balletto_2018-2019"/>
         <Literal>opera e balletto</Literal>
     </DataPropertyAssertion>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="theatre:part_of_season"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#abridgement"/>
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
@@ -1486,28 +1480,12 @@
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntity"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#responsibleEntityOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#revision"/>
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#revisionOf"/>
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#subject"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.org/vocab/frbr/core#subjectOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#successor"/>
@@ -1554,18 +1532,6 @@
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#characterInterpretation"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#characterIsPlayedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#expressionComposer"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasActor"/>
         <ObjectProperty IRI="#hasIntepreter"/>
     </SubObjectPropertyOf>
@@ -1592,10 +1558,6 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasBuildingOfPerformance"/>
         <ObjectProperty IRI="#hasPlaceOfPerformance"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasCharacter"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasChoreographer"/>
@@ -1678,10 +1640,6 @@
         <ObjectProperty IRI="#hasPlaceOfPerformance"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasPlaceOfPerformance"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasRelatedPerformance"/>
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
     </SubObjectPropertyOf>
@@ -1710,18 +1668,6 @@
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizer"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#includesInterpretation"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#interpretationIncludedIn"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#interpretedCharacter"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#isActorIn"/>
         <ObjectProperty IRI="#isIntepreterIn"/>
     </SubObjectPropertyOf>
@@ -1748,10 +1694,6 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#isBuildingOfPerformance"/>
         <ObjectProperty IRI="#isPlaceOfPerformance"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isCharacterOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#isChoreographerOf"/>
@@ -1830,10 +1772,6 @@
         <ObjectProperty IRI="#isPlaceOfPerformance"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isPlaceOfPerformance"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#isSetDesignerOf"/>
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realizerOf"/>
     </SubObjectPropertyOf>
@@ -1860,22 +1798,6 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#isWorkEmbodimentOf"/>
         <ObjectProperty IRI="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#manifestationComposer"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#playedCharacterIn"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#seasonContains"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#wasInterpretedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty abbreviatedIRI="theatre:part_of_season"/>
@@ -2269,6 +2191,10 @@
         <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInterpreted"/>
+        <Class IRI="https://schema.org/character"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasManifestationEmbodiment"/>
         <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
     </ObjectPropertyDomain>
@@ -2470,6 +2396,10 @@
         <Class IRI="#Interpretation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInterpreted"/>
+        <Class IRI="https://schema.org/Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasManifestationEmbodiment"/>
         <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
     </ObjectPropertyRange>
@@ -2544,37 +2474,38 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectPropertyChain>
-            <ObjectProperty IRI="#hasComposer"/>
-            <ObjectProperty IRI="http://purl.org/vocab/frbr/core#realization"/>
-        </ObjectPropertyChain>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectPropertyChain>
             <ObjectProperty IRI="#isWorkEmbodimentOf"/>
             <ObjectProperty IRI="#hasComposer"/>
         </ObjectPropertyChain>
         <ObjectProperty IRI="#manifestationComposer"/>
     </SubObjectPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="dc:date"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="dc:title"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#dateOfFirstExecution"/>
-        <DataProperty IRI="#dc:date"/>
+        <DataProperty abbreviatedIRI="dc:date"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#dateOfPerformance"/>
-        <DataProperty IRI="#dc:date"/>
+        <DataProperty abbreviatedIRI="dc:date"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#originalDate"/>
-        <DataProperty IRI="#dc:date"/>
+        <DataProperty abbreviatedIRI="dc:date"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#original_title"/>
-        <DataProperty IRI="#dc:title"/>
+        <DataProperty abbreviatedIRI="dc:title"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#other_title"/>
-        <DataProperty IRI="#dc:title"/>
+        <DataProperty abbreviatedIRI="dc:title"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#productionType"/>
@@ -2590,7 +2521,7 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#subtitle"/>
-        <DataProperty IRI="#dc:title"/>
+        <DataProperty abbreviatedIRI="dc:title"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#timeOfPerformance"/>
@@ -2598,19 +2529,11 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#title_reproduction"/>
-        <DataProperty IRI="#dc:title"/>
+        <DataProperty abbreviatedIRI="dc:title"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#title_translation"/>
-        <DataProperty IRI="#dc:title"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#dc:date"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#dc:title"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <DataProperty abbreviatedIRI="dc:title"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="https://schema.org/additionalName"/>
@@ -2626,11 +2549,11 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="https://schema.org/dateCreated"/>
-        <DataProperty IRI="#dc:date"/>
+        <DataProperty abbreviatedIRI="dc:date"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="https://schema.org/datePublished"/>
-        <DataProperty IRI="#dc:date"/>
+        <DataProperty abbreviatedIRI="dc:date"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="https://schema.org/deathDate"/>
@@ -2689,7 +2612,7 @@
         <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
     </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="#dc:date"/>
+        <DataProperty abbreviatedIRI="dc:date"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -3667,9 +3590,19 @@ It allows to refer to a literal translation, in which the intent is to render th
         <IRI>http://archivi.teatroregio.torino.it/oggetti/?id=33889&amp;b=search</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Instrument</IRI>
+        <Literal>interpretation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
         <IRI>#La_Traviata</IRI>
         <IRI>http://archivi.teatroregio.torino.it/oggetti/?id=523</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Role</IRI>
+        <Literal>role</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
@@ -3687,6 +3620,11 @@ It allows to refer to a literal translation, in which the intent is to render th
         <Literal>character interpretation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#characterIsPlayedBy</IRI>
+        <Literal>Defines the link between the portrayal of a character (Example: the interpretation of &quot;Il conte di Luna&quot; by Leo Nucci in a particular performance) and the actor or singer who plays the character (example: Leo Nucci).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#characterIsPlayedBy</IRI>
         <Literal>character played by</Literal>
@@ -3702,6 +3640,11 @@ It allows to refer to a literal translation, in which the intent is to render th
         <Literal>date of performance</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#expressionComposer</IRI>
+        <Literal>If an expression/production is a realization of a certain work, and the work has a composer, the name of the composer gets a relation to the expression though this object property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#expressionComposer</IRI>
         <Literal>expression composer</Literal>
@@ -3715,6 +3658,14 @@ It allows to refer to a literal translation, in which the intent is to render th
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasAssistantDirector</IRI>
         <Literal>has assistant director</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasAuthorOfTheLiteraryWork</IRI>
+        <Literal>This property defines the author of a literary work that inspired a work. 
+
+Example: 
+Giuseppe Verdi is the composer of the opera &quot;Otello&quot;, Arrigo Boito is the librettist, but since the opera is inspired by William Shakespeare&apos;s work of the same name, William Shakespeare will be &quot;author of the literary work&quot; for Giuseppe Verdi&apos;s Otello.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3752,6 +3703,14 @@ It allows to refer to a literal translation, in which the intent is to render th
         <Literal>has building of performance</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCharacter</IRI>
+        <Literal>Use this property to connect a work to its characters.
+
+Example:
+&quot;War and peace&quot; has character Pierre Bezukhov.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCharacter</IRI>
         <Literal>has character</Literal>
@@ -3759,7 +3718,7 @@ It allows to refer to a literal translation, in which the intent is to render th
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasCharacterPortrayal</IRI>
-        <Literal>This property establishes a link between a person and an interpretation.</Literal>
+        <Literal>This property establishes a link between a person and an interpretation (character portrayal).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3780,6 +3739,11 @@ It allows to refer to a literal translation, in which the intent is to render th
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasChorusMaster</IRI>
         <Literal>has chorus master</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasComposer</IRI>
+        <Literal>Defines the composer of a musical work.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3832,9 +3796,22 @@ It allows to refer to a literal translation, in which the intent is to render th
         <Literal>has interpreter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasInterpreted</IRI>
+        <Literal>This property is used to describe to list all the interpreters of a certain character.
+
+Example:
+If Micaela Carosi interpreted the character of &quot;Leonora&quot; from Il Trovatore by Giuseppe Verdi in a performance, it means that Leonora was interpreted by Micaela Carosi.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasInterpreted</IRI>
         <Literal>has interpreted</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasLibrettist</IRI>
+        <Literal>Defines the author of the libretto of a musical work.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3908,6 +3885,11 @@ embodiment</Literal>
         <Literal>has soprano</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSponsor</IRI>
+        <Literal>Defines the sponsoring organization of a production.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasTenor</IRI>
         <Literal>has tenor</Literal>
@@ -3924,6 +3906,11 @@ embodiment</Literal>
 
 Example:
 If Leo Nucci interpreted Il Conte di Luna in a performance of Il Trovatore, such performance &quot;includes intepretation&quot; &quot;Leo Nucci as Il Conte di Luna&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#includesInterpretation</IRI>
+        <Literal>includes interpretation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4036,6 +4023,11 @@ If Leo Nucci interpreted Il Conte di Luna in a performance of Il Trovatore, such
         <Literal>is equipment supplier</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isFirstPerformance</IRI>
+        <Literal>In a relation between performances, this class defines the opening performance of the production.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#isFirstPerformance</IRI>
         <Literal>is first performance</Literal>
@@ -4109,6 +4101,11 @@ If Leo Nucci interpreted Il Conte di Luna in a performance of Il Trovatore, such
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#isWigsSupplier</IRI>
         <Literal>is wigs supplier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isWorkEmbodimentOf</IRI>
+        <Literal>If a performance is the embodiment of a production which is the realization of a certain work, this property creates a relation between the performance and the work.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4189,6 +4186,11 @@ The opening night of a production would be number 1.</Literal>
         <Literal>title translation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#wasInterpretedBy</IRI>
+        <Literal>This property is use to list all the actors or singers who interpreted a certain character in the course of history.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#wasInterpretedBy</IRI>
         <Literal>was interpreted by</Literal>
@@ -4197,6 +4199,11 @@ The opening night of a production would be number 1.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Stagione_d&apos;Opera_e_di_Balletto_2018-2019</IRI>
         <Literal>Stagione d&apos;opera e di balletto 2018-2019</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/CreativeWork</IRI>
+        <Literal>Creative work</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4272,5 +4279,5 @@ The opening night of a production would be number 1.</Literal>
 
 
 
-<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
