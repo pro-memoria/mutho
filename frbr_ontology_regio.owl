@@ -2480,14 +2480,6 @@
         <ObjectProperty IRI="#manifestationComposer"/>
     </SubObjectPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty abbreviatedIRI="dc:date"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty abbreviatedIRI="dc:title"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="#dateOfFirstExecution"/>
         <DataProperty abbreviatedIRI="dc:date"/>
     </SubDataPropertyOf>
@@ -2508,24 +2500,8 @@
         <DataProperty abbreviatedIRI="dc:title"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#productionType"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#role"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#sortNumber"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="#subtitle"/>
         <DataProperty abbreviatedIRI="dc:title"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#timeOfPerformance"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#title_reproduction"/>
@@ -2536,64 +2512,12 @@
         <DataProperty abbreviatedIRI="dc:title"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="https://schema.org/additionalName"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="https://schema.org/birthDate"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="https://schema.org/birthPlace"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="https://schema.org/dateCreated"/>
         <DataProperty abbreviatedIRI="dc:date"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="https://schema.org/datePublished"/>
         <DataProperty abbreviatedIRI="dc:date"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="https://schema.org/deathDate"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="https://schema.org/deathPlace"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="https://schema.org/description"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="https://schema.org/familyName"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="https://schema.org/genre"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="https://schema.org/givenName"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="https://schema.org/sameAs"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="https://www.wikidata.org/wiki/Property:P412"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="https://www.wikidata.org/wiki/Property:P826"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="https://www.wikidata.org/wiki/Property:P870"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="#dateOfFirstExecution"/>
@@ -2611,18 +2535,6 @@
         <DataProperty IRI="https://schema.org/deathDate"/>
         <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
     </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty abbreviatedIRI="dc:date"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="https://schema.org/birthDate"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="https://schema.org/deathDate"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="https://schema.org/sameAs"/>
         <Datatype abbreviatedIRI="xsd:anyURI"/>
