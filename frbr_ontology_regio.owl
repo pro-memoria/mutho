@@ -777,15 +777,6 @@
         <Class IRI="http://xmlns.com/foaf/0.1/Organization"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="http://purl.org/vocab/frbr/core#Endeavour"/>
-        <ObjectUnionOf>
-            <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
-            <Class IRI="http://purl.org/vocab/frbr/core#Item"/>
-            <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
-            <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
-        </ObjectUnionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
         <ObjectIntersectionOf>
             <Class IRI="http://purl.org/vocab/frbr/core#Endeavour"/>
@@ -864,10 +855,6 @@
                 <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
             </ObjectAllValuesFrom>
         </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
-        <Class IRI="https://schema.org/CreativeWork"/>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
@@ -2431,6 +2418,7 @@
         <ObjectUnionOf>
             <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
             <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
+            <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
