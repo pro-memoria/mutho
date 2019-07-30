@@ -22,23 +22,23 @@
     <Prefix name="wikidata" IRI="https://www.wikidata.org/wiki/"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:contributor"/>
-        <Literal>David Shotton</Literal>
+        <Literal>Luca Montanera</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <Literal>Simone Cullino</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Paolo Ciccarese</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Silvio Peroni</Literal>
+        <Literal>Stefano Trinchero</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:date"/>
-        <Literal>2018-03-29</Literal>
+        <Literal>2019-07-15</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <Literal xml:lang="en">This vocabulary is an expression in OWL 2 DL of the basic concepts and relations described in the IFLA report on the Functional Requirements for Bibliographic Records (FRBR), also described in Ian Davis&apos;s RDF vocabulary (http://vocab.org/frbr/core).</Literal>
+        <Literal xml:lang="en">This vocabulary is an expression in OWL 2 DL of the basic concepts and relations existing in music and theatre topics.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:rights"/>
@@ -46,25 +46,24 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:title"/>
-        <Literal xml:lang="en">Essential FRBR in OWL2 DL</Literal>
+        <Literal xml:lang="en">Music and Theatre Ontology in OWL2</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal>The Essential FRBR in OWL2 DL Ontology (FRBR) is an expression in OWL 2 DL of the basic concepts and relations described in the IFLA report on the Functional Requirements for Bibliographic Records (FRBR), also described in Ian Davis&apos;s RDF vocabulary.
+        <Literal>This vocabulary is an expression in OWL 2 DL of the basic concepts and relations existing in music and theatre topics.
 
 **URL:** http://purl.org/spar/frbr
 
-**Creators**: [Paolo Ciccarese](http://orcid.org/0000-0002-5156-2703), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)
+**Creators**: Stefano Trinchero
 
-**Contributors:**: [David Shotton](http://orcid.org/0000-0001-5506-523X)
+**Contributors:**: Luca Montanera &amp; Simone Cullino, Angelo La Gorga, Andrea Calzolari
+**License:**
 
-**License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
-
-**Website:** http://www.sparontologies.net/ontologies/frbr</Literal>
+**Website:** https://github.com/pro-memoria/opereontology</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
-        <IRI>http://purl.org/spar/frbr/2011-06-29</IRI>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal>Company : Promemoria S.R.L. &lt;https://www.promemoriagroup.com/it&gt;</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>

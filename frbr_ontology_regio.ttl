@@ -1,0 +1,2260 @@
+@prefix : <https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix frbr: <http://vocab.org/frbr/extended#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2008/05/skos#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix opere: <http://purl.org/spar/frbr/opereonthology#> .
+@prefix theatre: <http://lukeblaney.co.uk/semweb/theatre#> .
+@prefix wikidata: <https://www.wikidata.org/wiki/> .
+@base <https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio> .
+
+<https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio> rdf:type owl:Ontology ;
+                                                                                          owl:versionIRI <https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio> ;
+                                                                                          dc:contributor "Luca Montanera" ,
+                                                                                                         "Simone Cullino" ;
+                                                                                          dc:creator "Stefano Trinchero" ;
+                                                                                          dc:date "2019-07-15" ;
+                                                                                          dc:description "This vocabulary is an expression in OWL 2 DL of the basic concepts and relations existing in music and theatre topics."@en ;
+                                                                                          dc:rights "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)."@en ;
+                                                                                          dc:title "Music and Theatre Ontology in OWL2"@en ;
+                                                                                          rdfs:comment """This vocabulary is an expression in OWL 2 DL of the basic concepts and relations existing in music and theatre topics.
+
+**URL:** http://purl.org/spar/frbr
+
+**Creators**: Stefano Trinchero
+
+**Contributors:**: Luca Montanera & Simone Cullino, Angelo La Gorga, Andrea Calzolari
+**License:**
+
+**Website:** https://github.com/pro-memoria/opereontology""" ;
+                                                                                          rdfs:seeAlso "Company : Promemoria S.R.L. <https://www.promemoriagroup.com/it>" ;
+                                                                                          owl:versionInfo "1.0.1" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+dc:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+rdfs:isDefinedBy rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2008/05/skos#note
+skos:note rdf:type owl:AnnotationProperty ;
+          rdfs:isDefinedBy skos: ;
+          rdfs:label "skos:note"@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://lukeblaney.co.uk/semweb/theatre#part_of_season
+theatre:part_of_season rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :seasonContains ;
+                       owl:propertyChainAxiom ( <http://purl.org/vocab/frbr/core#embodimentOf>
+                                                theatre:part_of_season
+                                              ) ;
+                       rdfs:label "is part of season" .
+
+
+###  http://purl.org/vocab/frbr/core#abridgement
+<http://purl.org/vocab/frbr/core#abridgement> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                              owl:inverseOf <http://purl.org/vocab/frbr/core#abridgementOf> ;
+                                              rdfs:domain <http://purl.org/vocab/frbr/core#Expression> ;
+                                              rdfs:range <http://purl.org/vocab/frbr/core#Expression> ;
+                                              rdfs:comment """An expression abridged in another one.
+
+In the abridged expression some content of the previous expression is removed, but the result does not alter the content to the extent that it becomes a new work. The expressions resulting from such modification are generally autonomous in nature (i.e., they do not normally require reference to the prior expression in order to be used or understood). """@en ;
+                                              rdfs:label "has abridgement"@en .
+
+
+###  http://purl.org/vocab/frbr/core#abridgementOf
+<http://purl.org/vocab/frbr/core#abridgementOf> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                                rdfs:comment "It identifies the entire expression of an abridged one."@en ;
+                                                rdfs:label "is abridgement of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#adaption
+<http://purl.org/vocab/frbr/core#adaption> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                           owl:inverseOf <http://purl.org/vocab/frbr/core#adaptionOf> ;
+                                           rdfs:domain [ rdf:type owl:Class ;
+                                                         owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                                       <http://purl.org/vocab/frbr/core#Work>
+                                                                     )
+                                                       ] ;
+                                           rdfs:range [ rdf:type owl:Class ;
+                                                        owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                                      <http://purl.org/vocab/frbr/core#Work>
+                                                                    )
+                                                      ] ;
+                                           rdfs:comment """A work/expression adapted in another one.
+
+This property describe the modification of an original work that is sufficient in degree to warrant their being considered as new works, rather than simply different expressions of the same work. If there exists a relation of this kind among two different expressions, they always refer to different works."""@en ;
+                                           rdfs:label "has adaption"@en .
+
+
+###  http://purl.org/vocab/frbr/core#adaptionOf
+<http://purl.org/vocab/frbr/core#adaptionOf> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                             rdfs:comment "It identifies the work/expression of an adapted one."@en ;
+                                             rdfs:label "is adaption of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#alternate
+<http://purl.org/vocab/frbr/core#alternate> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                            owl:inverseOf <http://purl.org/vocab/frbr/core#alternateOf> ;
+                                            rdfs:domain <http://purl.org/vocab/frbr/core#Manifestation> ;
+                                            rdfs:range <http://purl.org/vocab/frbr/core#Manifestation> ;
+                                            rdfs:comment """A manifestation having another one as alternate.
+
+The alternate relationship involves manifestations that effectively serve as alternates for each other. The alternate relationship obtains, for example, when a publication, sound recording, video, etc. is issued in more than one format or when it is released simultaneously by different publishers in different countries."""@en ;
+                                            rdfs:label "has alternate"@en .
+
+
+###  http://purl.org/vocab/frbr/core#alternateOf
+<http://purl.org/vocab/frbr/core#alternateOf> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                              rdfs:comment "It identifies the manifestation of an alternative one."@en ;
+                                              rdfs:label "is alternate of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#arrangement
+<http://purl.org/vocab/frbr/core#arrangement> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                              owl:inverseOf <http://purl.org/vocab/frbr/core#arrangementOf> ;
+                                              rdfs:domain <http://purl.org/vocab/frbr/core#Expression> ;
+                                              rdfs:range <http://purl.org/vocab/frbr/core#Expression> ;
+                                              rdfs:comment """An expression arranged in another one.
+
+In the arranged expression some content of the previous expression is changed in some way, but the result does not alter the content to the extent that it becomes a new work. The expressions resulting from such modification are generally autonomous in nature (i.e., they do not normally require reference to the prior expression in order to be used or understood)."""@en ;
+                                              rdfs:label "has arrangement"@en .
+
+
+###  http://purl.org/vocab/frbr/core#arrangementOf
+<http://purl.org/vocab/frbr/core#arrangementOf> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                                rdfs:comment "It identifies the original expression of an arranged one."@en ;
+                                                rdfs:label "is arrangement of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#complement
+<http://purl.org/vocab/frbr/core#complement> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                             owl:inverseOf <http://purl.org/vocab/frbr/core#complementOf> ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                                         <http://purl.org/vocab/frbr/core#Work>
+                                                                       )
+                                                         ] ;
+                                             rdfs:range [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                                        <http://purl.org/vocab/frbr/core#Work>
+                                                                      )
+                                                        ] ;
+                                             rdfs:comment """An expression work/expression having another one as complement.
+
+This property describes works that are intended to be combined with or inserted into the related work. In other words, they are intended to be integrated in some way with the other work, but were not part of the original conception of that prior work. If there exists a relation of this kind among two different expressions, then they always refer to different works."""@en ;
+                                             rdfs:label "has complement"@en .
+
+
+###  http://purl.org/vocab/frbr/core#complementOf
+<http://purl.org/vocab/frbr/core#complementOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                               rdfs:comment "It identifies the work/expression of that is a complement of another one."@en ;
+                                               rdfs:label "is complement of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#creator
+<http://purl.org/vocab/frbr/core#creator> rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#responsibleEntity> ;
+                                          owl:inverseOf <http://purl.org/vocab/frbr/core#creatorOf> ;
+                                          rdfs:domain <http://purl.org/vocab/frbr/core#Work> ;
+                                          rdfs:comment "A work linked to its creator."@en ;
+                                          rdfs:label "has creator"@en .
+
+
+###  http://purl.org/vocab/frbr/core#creatorOf
+<http://purl.org/vocab/frbr/core#creatorOf> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#responsibleEntityOf> ;
+                                            rdfs:comment "The creator of a particular work."@en ;
+                                            rdfs:label "is creator of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#embodiment
+<http://purl.org/vocab/frbr/core#embodiment> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                             owl:inverseOf <http://purl.org/vocab/frbr/core#embodimentOf> ;
+                                             rdfs:domain <http://purl.org/vocab/frbr/core#Expression> ;
+                                             rdfs:range <http://purl.org/vocab/frbr/core#Manifestation> ;
+                                             rdfs:comment "An expression embodied in a manifestation."@en ;
+                                             rdfs:label "has embodiment"@en .
+
+
+###  http://purl.org/vocab/frbr/core#embodimentOf
+<http://purl.org/vocab/frbr/core#embodimentOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                               rdfs:domain <http://purl.org/vocab/frbr/core#Manifestation> ;
+                                               rdfs:range <http://purl.org/vocab/frbr/core#Expression> ;
+                                               rdfs:comment "A manifestation that embodies an expression."@en ;
+                                               rdfs:label "is embodiment of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#exemplar
+<http://purl.org/vocab/frbr/core#exemplar> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                           owl:inverseOf <http://purl.org/vocab/frbr/core#exemplarOf> ;
+                                           rdfs:domain <http://purl.org/vocab/frbr/core#Manifestation> ;
+                                           rdfs:range <http://purl.org/vocab/frbr/core#Item> ;
+                                           rdfs:comment "A manifestation exemplified in an item."@en ;
+                                           rdfs:label "has exemplar"@en .
+
+
+###  http://purl.org/vocab/frbr/core#exemplarOf
+<http://purl.org/vocab/frbr/core#exemplarOf> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                             rdf:type owl:FunctionalProperty ;
+                                             rdfs:comment "An item that exemplifies a manifestation."@en ;
+                                             rdfs:label "is exemplar of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#imitation
+<http://purl.org/vocab/frbr/core#imitation> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                            owl:inverseOf <http://purl.org/vocab/frbr/core#imitationOf> ;
+                                            rdfs:domain [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                                        <http://purl.org/vocab/frbr/core#Work>
+                                                                      )
+                                                        ] ;
+                                            rdfs:range [ rdf:type owl:Class ;
+                                                         owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                                       <http://purl.org/vocab/frbr/core#Work>
+                                                                     )
+                                                       ] ;
+                                            rdfs:comment """An work/expression imitated in another one.
+
+This property describes works that are intended to be an imitation another original work that is sufficient in degree to warrant their being considered as new works, rather than simply different expressions of the same work. If there exists a relation of this kind among two different expressions, then they always refer to different works."""@en ;
+                                            rdfs:label "has imitation"@en .
+
+
+###  http://purl.org/vocab/frbr/core#imitationOf
+<http://purl.org/vocab/frbr/core#imitationOf> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                              rdfs:comment "It identifies the work/expression of an imitated one."@en ;
+                                              rdfs:label "is imitation of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#owner
+<http://purl.org/vocab/frbr/core#owner> rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#responsibleEntity> ;
+                                        owl:inverseOf <http://purl.org/vocab/frbr/core#ownerOf> ;
+                                        rdfs:domain <http://purl.org/vocab/frbr/core#Item> ;
+                                        rdfs:comment "An item linked to its owner."@en ;
+                                        rdfs:label "has owner"@en .
+
+
+###  http://purl.org/vocab/frbr/core#ownerOf
+<http://purl.org/vocab/frbr/core#ownerOf> rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#responsibleEntityOf> ;
+                                          rdfs:comment "The owner of a particular item."@en ;
+                                          rdfs:label "is owner of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#part
+<http://purl.org/vocab/frbr/core#part> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                       owl:inverseOf frbr:isPartOfWork ;
+                                       rdf:type owl:TransitiveProperty ;
+                                       rdfs:comment "A part of an endeavour."@en ;
+                                       rdfs:label "has part"@en ;
+                                       skos:note "Unlike the FRBR version in RDF http://vocab.org/frbr/core.html the present version defines partonomy relationships transitive."@en .
+
+
+###  http://purl.org/vocab/frbr/core#producer
+<http://purl.org/vocab/frbr/core#producer> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#responsibleEntity> ;
+                                           owl:inverseOf <http://purl.org/vocab/frbr/core#producerOf> ;
+                                           rdfs:comment "A manifestation linked to its prodecer."@en ;
+                                           rdfs:label "has producer"@en .
+
+
+###  http://purl.org/vocab/frbr/core#producerOf
+<http://purl.org/vocab/frbr/core#producerOf> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#responsibleEntityOf> ;
+                                             rdfs:comment "The producer of a particular manifestation."@en ;
+                                             rdfs:label "is producer of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#realization
+<http://purl.org/vocab/frbr/core#realization> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                              owl:inverseOf <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                              rdfs:domain <http://purl.org/vocab/frbr/core#Work> ;
+                                              rdfs:range <http://purl.org/vocab/frbr/core#Expression> ;
+                                              rdfs:comment "A work realized through an expression."@en ;
+                                              rdfs:label "has realization"@en .
+
+
+###  http://purl.org/vocab/frbr/core#realizationOf
+<http://purl.org/vocab/frbr/core#realizationOf> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                                rdf:type owl:FunctionalProperty ;
+                                                rdfs:domain <http://purl.org/vocab/frbr/core#Expression> ;
+                                                rdfs:range <http://purl.org/vocab/frbr/core#Work> ;
+                                                rdfs:comment "An expression that realizes a work."@en ;
+                                                rdfs:label "is realization of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#realizer
+<http://purl.org/vocab/frbr/core#realizer> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#responsibleEntity> ;
+                                           owl:inverseOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+                                           rdfs:comment "An expression linked to its realizer."@en ;
+                                           rdfs:label "has realizer"@en .
+
+
+###  http://purl.org/vocab/frbr/core#realizerOf
+<http://purl.org/vocab/frbr/core#realizerOf> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#responsibleEntityOf> ;
+                                             rdfs:domain <http://xmlns.com/foaf/0.1/Agent> ;
+                                             rdfs:range [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                                        <http://purl.org/vocab/frbr/core#Manifestation>
+                                                                      )
+                                                        ] ;
+                                             rdfs:comment "The realizer of a particular expression."@en ;
+                                             rdfs:label "is realizer of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#reconfiguration
+<http://purl.org/vocab/frbr/core#reconfiguration> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                                  owl:inverseOf <http://purl.org/vocab/frbr/core#reconfigurationOf> ;
+                                                  rdfs:domain <http://purl.org/vocab/frbr/core#Item> ;
+                                                  rdfs:range <http://purl.org/vocab/frbr/core#Item> ;
+                                                  rdfs:comment """An item reconfigured in another one.
+
+The reconfiguration relationship is one in which one or more items are changed in such a way that a new item or items result. Most commonly, an item of one manifestation is bound with an item of a different manifestation to make a new item. """@en ;
+                                                  rdfs:label "has reconfiguration"@en .
+
+
+###  http://purl.org/vocab/frbr/core#reconfigurationOf
+<http://purl.org/vocab/frbr/core#reconfigurationOf> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                                    rdfs:comment "It identifies the manifestation of a reconfigured one."@en ;
+                                                    rdfs:label "is reconfiguration of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#relatedEndeavour
+<http://purl.org/vocab/frbr/core#relatedEndeavour> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://purl.org/vocab/frbr/core#Endeavour> ;
+                                                   rdfs:range <http://purl.org/vocab/frbr/core#Endeavour> ;
+                                                   rdfs:label "has related endeavour"@en .
+
+
+###  http://purl.org/vocab/frbr/core#reproduction
+<http://purl.org/vocab/frbr/core#reproduction> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                               owl:inverseOf <http://purl.org/vocab/frbr/core#reproductionOf> ;
+                                               rdfs:domain [ rdf:type owl:Class ;
+                                                             owl:unionOf ( <http://purl.org/vocab/frbr/core#Item>
+                                                                           <http://purl.org/vocab/frbr/core#Manifestation>
+                                                                         )
+                                                           ] ;
+                                               rdfs:range [ rdf:type owl:Class ;
+                                                            owl:unionOf ( <http://purl.org/vocab/frbr/core#Item>
+                                                                          <http://purl.org/vocab/frbr/core#Manifestation>
+                                                                        )
+                                                          ] ;
+                                               rdfs:comment """A manifestation/item reproduced in another one.
+
+A reproduction indicates the relationship as it would be drawn from the first manifestation/item in the relationship to the second manifestation/item in the relationship."""@en ;
+                                               rdfs:label "has reproduction"@en .
+
+
+###  http://purl.org/vocab/frbr/core#reproductionOf
+<http://purl.org/vocab/frbr/core#reproductionOf> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                                 rdfs:comment "It identifies the manifestation/item of a reproduced one."@en ;
+                                                 rdfs:label "is reproduction of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#responsibleEntity
+<http://purl.org/vocab/frbr/core#responsibleEntity> rdf:type owl:ObjectProperty ;
+                                                    owl:inverseOf <http://purl.org/vocab/frbr/core#responsibleEntityOf> ;
+                                                    rdfs:domain <http://purl.org/vocab/frbr/core#Endeavour> ;
+                                                    rdfs:range <http://purl.org/vocab/frbr/core#ResponsibleEntity> ;
+                                                    rdfs:comment "Any endeavour having a particular entity that is responsible of it."@en ;
+                                                    rdfs:label "has responsible entity"@en .
+
+
+###  http://purl.org/vocab/frbr/core#responsibleEntityOf
+<http://purl.org/vocab/frbr/core#responsibleEntityOf> rdf:type owl:ObjectProperty ;
+                                                      rdfs:comment "An entity that is resposible for a particular endeavour."@en ;
+                                                      rdfs:label "is responsible entity of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#revision
+<http://purl.org/vocab/frbr/core#revision> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                           owl:inverseOf <http://purl.org/vocab/frbr/core#revisionOf> ;
+                                           rdfs:domain <http://purl.org/vocab/frbr/core#Expression> ;
+                                           rdfs:range <http://purl.org/vocab/frbr/core#Expression> ;
+                                           rdfs:comment """An expression revised in another one.
+
+A revision has the intent to alter or update the content of the prior expression, but without changing the content so much that it becomes a new work."""@en ;
+                                           rdfs:label "has revision"@en .
+
+
+###  http://purl.org/vocab/frbr/core#revisionOf
+<http://purl.org/vocab/frbr/core#revisionOf> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                             rdfs:comment "It identifies the previous expression of a revised one."@en ;
+                                             rdfs:label "is revision of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#subject
+<http://purl.org/vocab/frbr/core#subject> rdf:type owl:ObjectProperty ;
+                                          owl:inverseOf <http://purl.org/vocab/frbr/core#subjectOf> ;
+                                          rdfs:domain <http://purl.org/vocab/frbr/core#Work> ;
+                                          rdfs:range [ rdf:type owl:Class ;
+                                                       owl:unionOf ( <http://purl.org/vocab/frbr/core#CorporateBody>
+                                                                     <http://purl.org/vocab/frbr/core#Endeavour>
+                                                                     <http://purl.org/vocab/frbr/core#Subject>
+                                                                   )
+                                                     ] ;
+                                          rdfs:comment "A work linked to a particular subject it is talking about."@en ;
+                                          rdfs:label "has subject"@en .
+
+
+###  http://purl.org/vocab/frbr/core#subjectOf
+<http://purl.org/vocab/frbr/core#subjectOf> rdf:type owl:ObjectProperty ;
+                                            rdfs:comment "A subject a work talks abbout."@en ;
+                                            rdfs:label "is subject of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#successor
+<http://purl.org/vocab/frbr/core#successor> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                            owl:inverseOf <http://purl.org/vocab/frbr/core#successorOf> ;
+                                            rdfs:domain [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                                        <http://purl.org/vocab/frbr/core#Work>
+                                                                      )
+                                                        ] ;
+                                            rdfs:range [ rdf:type owl:Class ;
+                                                         owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                                       <http://purl.org/vocab/frbr/core#Work>
+                                                                     )
+                                                       ] ;
+                                            rdfs:comment """An expression work/expression having another one as successor.
+
+The successor type of relationship involves a kind of linear progression of content from one work/expression to the other. In some cases, the content of the successor may be closely connected to the content of the preceding work, which would result in a work that is referential. In others, such as with loosely connected parts of a trilogy, the successor will be autonomous. Serial publications that result from the merger or split of their predecessors and stand on their own without requiring reference to the predecessor are also examples of autonomous works that fall within the successor relationship type. If there exists a relation of this kind among two different expressions, then they always refer to different works."""@en ;
+                                            rdfs:label "has successor"@en .
+
+
+###  http://purl.org/vocab/frbr/core#successorOf
+<http://purl.org/vocab/frbr/core#successorOf> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                              rdfs:comment "It identifies the previous work/expression of a succeeded one."@en ;
+                                              rdfs:label "is successor of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#summarization
+<http://purl.org/vocab/frbr/core#summarization> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                                owl:inverseOf <http://purl.org/vocab/frbr/core#summarizationOf> ;
+                                                rdfs:domain [ rdf:type owl:Class ;
+                                                              owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                                            <http://purl.org/vocab/frbr/core#Work>
+                                                                          )
+                                                            ] ;
+                                                rdfs:range [ rdf:type owl:Class ;
+                                                             owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                                           <http://purl.org/vocab/frbr/core#Work>
+                                                                         )
+                                                           ] ;
+                                                rdfs:comment """A work/expression summarized in another one.
+
+This property describe the summarization of an original work that is sufficient in degree to warrant their being considered as new works, rather than simply different expressions of the same work. If there exists a relation of this kind among two different expressions, they always refer to different works."""@en ;
+                                                rdfs:label "has summarization"@en .
+
+
+###  http://purl.org/vocab/frbr/core#summarizationOf
+<http://purl.org/vocab/frbr/core#summarizationOf> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                                  rdfs:comment "It identifies the original work/expression of a summarized one."@en ;
+                                                  rdfs:label "is summarization of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#supplement
+<http://purl.org/vocab/frbr/core#supplement> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                             owl:inverseOf <http://purl.org/vocab/frbr/core#supplementOf> ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                                         <http://purl.org/vocab/frbr/core#Work>
+                                                                       )
+                                                         ] ;
+                                             rdfs:range [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                                        <http://purl.org/vocab/frbr/core#Work>
+                                                                      )
+                                                        ] ;
+                                             rdfs:comment """An expression work/expression having another one as supplement.
+
+The supplement relationship type involves works/expressions that are intended to be used in conjunction with another work/expression. Some of these, such as indices, concordances, teachers' guides, glosses, and instruction manuals for electronic resources will be so closely associated with the content of the related work/expression that they are useless without the other work/expression."""@en ;
+                                             rdfs:label "has supplement"@en .
+
+
+###  http://purl.org/vocab/frbr/core#supplementOf
+<http://purl.org/vocab/frbr/core#supplementOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                               rdfs:comment "It identifies the work/expression of a particular supplement of it."@en ;
+                                               rdfs:label "is supplement of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#transformation
+<http://purl.org/vocab/frbr/core#transformation> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                                 owl:inverseOf <http://purl.org/vocab/frbr/core#transformationOf> ;
+                                                 rdfs:domain [ rdf:type owl:Class ;
+                                                               owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                                             <http://purl.org/vocab/frbr/core#Work>
+                                                                           )
+                                                             ] ;
+                                                 rdfs:range [ rdf:type owl:Class ;
+                                                              owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                                            <http://purl.org/vocab/frbr/core#Work>
+                                                                          )
+                                                            ] ;
+                                                 rdfs:comment """An work/expression transformed in another one.
+
+This property describes the transformation of an original work or expression into another work or expression that is sufficiently different in degree to warrant the product of the transformation being considered as a new work or expression, rather than simply a different expression of the original work. If there exists a frbr:transformation relation between two different expressions, then they always relate to different works."""@en ;
+                                                 rdfs:label "has transformation"@en .
+
+
+###  http://purl.org/vocab/frbr/core#transformationOf
+<http://purl.org/vocab/frbr/core#transformationOf> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                                   rdfs:comment "It identifies the original work/expression of a trasformed one."@en ;
+                                                   rdfs:label "is transformation of"@en .
+
+
+###  http://purl.org/vocab/frbr/core#translation
+<http://purl.org/vocab/frbr/core#translation> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                              owl:inverseOf <http://purl.org/vocab/frbr/core#translationOf> ;
+                                              rdfs:domain <http://purl.org/vocab/frbr/core#Expression> ;
+                                              rdfs:range <http://purl.org/vocab/frbr/core#Expression> ;
+                                              rdfs:comment """An expression translated in another one.
+
+It allows to refer to a literal translation, in which the intent is to render the intellectual content of the previous expression as accurately as possible."""@en ;
+                                              rdfs:label "has translation"@en .
+
+
+###  http://purl.org/vocab/frbr/core#translationOf
+<http://purl.org/vocab/frbr/core#translationOf> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                                                rdfs:comment "It identifies the original expression of a translated one."@en ;
+                                                rdfs:label "is translation of"@en .
+
+
+###  http://vocab.org/frbr/extended#isPartOfWork
+frbr:isPartOfWork rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                  rdf:type owl:TransitiveProperty ;
+                  rdfs:comment "An endeavour incorporating another endeavour."@en ;
+                  rdfs:label "is part of"@en ;
+                  skos:note "Unlike the FRBR version in RDF http://vocab.org/frbr/core.html the present version defines partonomy relationships transitive."@en .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#characterInterpretation
+:characterInterpretation rdf:type owl:ObjectProperty ;
+                         owl:inverseOf :interpretedCharacter ;
+                         rdfs:domain <https://schema.org/character> ;
+                         rdfs:comment "Defines a link between a character and the interpretation of that character by an actor or singer (Character portrayal)." ;
+                         rdfs:label "character interpretation" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#characterIsPlayedBy
+:characterIsPlayedBy rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :hasCharacterPortrayal ;
+                     rdfs:domain :CharacterPortrayal ;
+                     rdfs:range <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+                     rdfs:comment "Defines the link between the portrayal of a character (Example: the interpretation of \"Il conte di Luna\" by Leo Nucci in a particular performance) and the actor or singer who plays the character (example: Leo Nucci)." ;
+                     rdfs:label "character played by" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#expressionComposer
+:expressionComposer rdf:type owl:ObjectProperty ;
+                    rdfs:domain <http://purl.org/vocab/frbr/core#Expression> ;
+                    owl:propertyChainAxiom ( <http://purl.org/vocab/frbr/core#realizationOf>
+                                             :hasComposer
+                                           ) ;
+                    rdfs:comment "If an expression/production is a realization of a certain work, and the work has a composer, the name of the composer gets a relation to the expression though this object property" ;
+                    rdfs:label "expression composer" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasActor
+:hasActor rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :hasIntepreter ;
+          rdfs:label "has actor" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasAssistantDirector
+:hasAssistantDirector rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
+                      owl:inverseOf :isAssistantDirectorOf ;
+                      rdfs:label "has assistant director" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasAuthorOfTheLiteraryWork
+:hasAuthorOfTheLiteraryWork rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#creator> ;
+                            rdfs:comment """This property defines the author of a literary work that inspired a work. 
+
+Example: 
+Giuseppe Verdi is the composer of the opera \"Otello\", Arrigo Boito is the librettist, but since the opera is inspired by William Shakespeare's work of the same name, William Shakespeare will be \"author of the literary work\" for Giuseppe Verdi's Otello.""" ;
+                            rdfs:label "has author of the literary work" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasBaritone
+:hasBaritone rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasIntepreter ;
+             owl:inverseOf :isBaritoneIn ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                         <http://purl.org/vocab/frbr/core#Manifestation>
+                                       )
+                         ] ;
+             rdfs:range <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+             rdfs:label "has baritone" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasBass
+:hasBass rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasIntepreter ;
+         owl:inverseOf :isBassIn ;
+         rdfs:label "has bass" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasBuildingOfFirstPerformance
+:hasBuildingOfFirstPerformance rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :hasPlaceOfFirstPerformance ;
+                               owl:inverseOf :isBuildingOfFirstPerformance ;
+                               rdfs:comment "Defines the venue where the first performance of a production/expression took place." ;
+                               rdfs:label "has building of first performance" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasBuildingOfPerformance
+:hasBuildingOfPerformance rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :hasPlaceOfPerformance ;
+                          owl:inverseOf :isBuildingOfPerformance ;
+                          rdfs:comment "Defines the venue of the performance" ;
+                          rdfs:label "has building of performance" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasCharacter
+:hasCharacter rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isCharacterOf ;
+              rdfs:domain <http://purl.org/vocab/frbr/core#Work> ;
+              rdfs:range <https://schema.org/character> ;
+              rdfs:comment """Use this property to connect a work to its characters.
+
+Example:
+\"War and peace\" has character Pierre Bezukhov.""" ;
+              rdfs:label "has character" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasCharacterPortrayal
+:hasCharacterPortrayal rdf:type owl:ObjectProperty ;
+                       rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+                       rdfs:range :Interpretation ;
+                       rdfs:comment "This property establishes a link between a person and an interpretation (character portrayal)." ;
+                       rdfs:label "has character portrayal" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasChoreographer
+:hasChoreographer rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
+                  rdfs:label "has choreographer" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasChorus
+:hasChorus rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
+           rdfs:label "has chorus" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasChorusMaster
+:hasChorusMaster rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
+                 owl:inverseOf :isChorusMaster ;
+                 rdfs:label "has chorus master" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasComposer
+:hasComposer rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#creator> ;
+             owl:inverseOf :isComposerOf ;
+             rdfs:comment "Defines the composer of a musical work." ;
+             rdfs:label "has composer" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasConductor
+:hasConductor rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
+              owl:inverseOf :isConductorOf ;
+              rdfs:label "has conductor" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasContralto
+:hasContralto rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasIntepreter ;
+              owl:inverseOf :isContraltoIn ;
+              rdfs:label "has contralto" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasCostumeTailoring
+:hasCostumeTailoring rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
+                     owl:inverseOf :isCostumeTailoringOf ;
+                     rdfs:label "has costumes tailoring" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasCostumesDesigner
+:hasCostumesDesigner rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
+                     owl:inverseOf :isCostumesDesignerOf ;
+                     rdfs:label "has costumes designer" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasCountertenor
+:hasCountertenor rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasIntepreter ;
+                 rdfs:label "has countertenor" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasDirector
+:hasDirector rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
+             owl:inverseOf :isDirectorOf ;
+             rdfs:label "has director" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasEquipmentSupplier
+:hasEquipmentSupplier rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
+                      owl:inverseOf :isEquipmentSupplier ;
+                      rdfs:label "has equipment supplier" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasFirstPerformance
+:hasFirstPerformance rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                     owl:inverseOf :isFirstPerformance ;
+                     rdfs:label "has first performance" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasIntepreter
+:hasIntepreter rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
+               owl:inverseOf :isIntepreterIn ;
+               rdfs:label "has interpreter" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasInterpreted
+:hasInterpreted rdf:type owl:ObjectProperty ;
+                owl:inverseOf :wasInterpretedBy ;
+                rdfs:domain <https://schema.org/character> ;
+                rdfs:range <https://schema.org/Person> ;
+                rdfs:comment """This property is used to describe to list all the interpreters of a certain character.
+
+Example:
+If Micaela Carosi interpreted the character of \"Leonora\" from Il Trovatore by Giuseppe Verdi in a performance, it means that Leonora was interpreted by Micaela Carosi.""" ;
+                rdfs:label "has interpreted" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasLibrettist
+:hasLibrettist rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#creator> ;
+               owl:inverseOf :isLibrettistOf ;
+               rdfs:comment "Defines the author of the libretto of a musical work." ;
+               rdfs:label "has librettist" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasLightingDesigner
+:hasLightingDesigner rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
+                     owl:inverseOf :isLightingDesignerOf ;
+                     rdfs:label "has lighting designer" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasManifestationEmbodiment
+:hasManifestationEmbodiment rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                            owl:inverseOf :isWorkEmbodimentOf ;
+                            rdfs:domain <http://purl.org/vocab/frbr/core#Work> ;
+                            rdfs:range <http://purl.org/vocab/frbr/core#Manifestation> ;
+                            rdfs:label """has manifestation 
+embodiment""" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasMezzosoprano
+:hasMezzosoprano rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasIntepreter ;
+                 owl:inverseOf :isMezzosopranoIn ;
+                 rdfs:label "has mezzosoprano" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasMusician
+:hasMusician rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasIntepreter ;
+             owl:inverseOf :isMusician ;
+             rdfs:label "has musician" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasOrchestra
+:hasOrchestra rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
+              owl:inverseOf :isOrchestraOf ;
+              rdfs:label "has orchestra" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasPlaceOfFirstPerformance
+:hasPlaceOfFirstPerformance rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :hasPlaceOfPerformance ;
+                            owl:inverseOf :isPlaceOfFirstPerformance ;
+                            rdfs:comment "Defines the place where the first performance of a production/expression took place." ;
+                            rdfs:label "has place of first performance" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasPlaceOfPerformance
+:hasPlaceOfPerformance rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :isPlaceOfPerformance ;
+                       rdfs:comment "Defines the place (city) where the performance took place." ;
+                       rdfs:label "has place of performance" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasRelatedPerformance
+:hasRelatedPerformance rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                       rdfs:domain :Performance ;
+                       rdfs:range :Performance ;
+                       rdfs:label "has related performance" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasSetDesigner
+:hasSetDesigner rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
+                owl:inverseOf :isSetDesignerOf ;
+                rdfs:label "has set designer" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasShoesManifacturer
+:hasShoesManifacturer rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
+                      rdfs:label "has shoes manifacturer" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasSoprano
+:hasSoprano rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasIntepreter ;
+            owl:inverseOf :isSopranoIn ;
+            rdfs:label "has soprano" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasSponsor
+:hasSponsor rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#producer> ;
+            owl:inverseOf :isSponsorOf ;
+            rdfs:comment "Defines the sponsoring organization of a production." .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasTenor
+:hasTenor rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :hasIntepreter ;
+          owl:inverseOf :isTenorIn ;
+          rdfs:label "has tenor" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasWigsSupplier
+:hasWigsSupplier rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
+                 rdfs:label "has wigs supplier" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#includesInterpretation
+:includesInterpretation rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :interpretationIncludedIn ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                    <http://purl.org/vocab/frbr/core#Manifestation>
+                                                  )
+                                    ] ;
+                        rdfs:range :Interpretation ;
+                        rdfs:comment """Refers to an interpretation (for example a Character portrayal) included in a performance.
+
+Example:
+If Leo Nucci interpreted Il Conte di Luna in a performance of Il Trovatore, such performance \"includes intepretation\" \"Leo Nucci as Il Conte di Luna\".""" ;
+                        rdfs:label "includes interpretation" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#interpretationIncludedIn
+:interpretationIncludedIn rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Interpretation ;
+                          rdfs:range <http://purl.org/vocab/frbr/core#Endeavour> ;
+                          rdfs:label "interpretation included in" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#interpretedCharacter
+:interpretedCharacter rdf:type owl:ObjectProperty ;
+                      rdfs:domain :CharacterPortrayal ;
+                      rdfs:range <https://schema.org/character> ;
+                      rdfs:label "interpreted character" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isActorIn
+:isActorIn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :isIntepreterIn ;
+           rdfs:label "is actor in" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isAssistantDirectorOf
+:isAssistantDirectorOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+                       rdfs:label "is assistant director of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isAuthorOf
+:isAuthorOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#creatorOf> ;
+            rdfs:label "is author of" ,
+                       "is author of the literary work" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isBaritoneIn
+:isBaritoneIn rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :isIntepreterIn ;
+              rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+              rdfs:label "is baritone in" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isBassIn
+:isBassIn rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :isIntepreterIn ;
+          rdfs:label "is bass in" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isBuildingOfFirstPerformance
+:isBuildingOfFirstPerformance rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :isPlaceOfFirstPerformance ;
+                              rdfs:label "is building of first performance" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isBuildingOfPerformance
+:isBuildingOfPerformance rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :isPlaceOfPerformance ;
+                         rdfs:label "is building of performance" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isCharacterOf
+:isCharacterOf rdf:type owl:ObjectProperty ;
+               rdfs:label "is charachter of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isChoreographerOf
+:isChoreographerOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+                   rdfs:label "is choreographer of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isChorusMaster
+:isChorusMaster rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+                rdfs:label "is chorus master" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isChorusOf
+:isChorusOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+            rdfs:label "is chorus of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isComposerOf
+:isComposerOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#creatorOf> ;
+              rdfs:label "is composer of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isConductorOf
+:isConductorOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+               rdfs:label "is conductor of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isContraltoIn
+:isContraltoIn rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :isIntepreterIn ;
+               rdfs:label "is coltralto in" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isCostumeTailoringOf
+:isCostumeTailoringOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+                      rdfs:label "is costume tailoring of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isCostumesDesignerOf
+:isCostumesDesignerOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+                      rdfs:label "is costume designer of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isCountertenorIn
+:isCountertenorIn rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :isIntepreterIn ;
+                  rdfs:label "is countertenor in" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isDirectorOf
+:isDirectorOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+              rdfs:label "is director of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isEquipmentSupplier
+:isEquipmentSupplier rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+                     rdfs:label "is equipment supplier" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isFirstPerformance
+:isFirstPerformance rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                <http://purl.org/vocab/frbr/core#Manifestation>
+                                              )
+                                ] ;
+                    rdfs:range [ rdf:type owl:Class ;
+                                 owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                               <http://purl.org/vocab/frbr/core#Manifestation>
+                                             )
+                               ] ;
+                    rdfs:comment "In a relation between performances, this class defines the opening performance of the production." ;
+                    rdfs:label "is first performance" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isIntepreterIn
+:isIntepreterIn rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+                rdfs:label "is interpreter in" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isLibrettistOf
+:isLibrettistOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#creatorOf> ;
+                rdfs:label "is librettist of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isLightingDesignerOf
+:isLightingDesignerOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+                      rdfs:label "is lighting designer of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isMezzosopranoIn
+:isMezzosopranoIn rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :isIntepreterIn ;
+                  rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+                  rdfs:label "is mezzosoprano in" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isMusician
+:isMusician rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :isIntepreterIn ;
+            rdfs:label "is musician in" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isOrchestraOf
+:isOrchestraOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+               rdfs:label "is orchestra of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isPlaceOfFirstPerformance
+:isPlaceOfFirstPerformance rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :isPlaceOfPerformance ;
+                           rdfs:label "is place of first performance" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isPlaceOfPerformance
+:isPlaceOfPerformance rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Place ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                   owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                                 <http://purl.org/vocab/frbr/core#Manifestation>
+                                                 <http://purl.org/vocab/frbr/core#Work>
+                                               )
+                                 ] ;
+                      rdfs:label "is place of performance" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isSetDesignerOf
+:isSetDesignerOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+                 rdfs:label "is set designer of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isShoesManifacturerOf
+:isShoesManifacturerOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+                       rdfs:label "is shoes manifacturer of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isSopranoIn
+:isSopranoIn rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :isIntepreterIn ;
+             rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+             rdfs:label "is soprano in" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isSponsorOf
+:isSponsorOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#producerOf> ;
+             rdfs:label "is sponsor of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isTenorIn
+:isTenorIn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :isIntepreterIn ;
+           rdfs:label "is tenor in" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isWigsSupplier
+:isWigsSupplier rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
+                rdfs:label "is wigs supplier" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isWorkEmbodimentOf
+:isWorkEmbodimentOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
+                    rdfs:domain <http://purl.org/vocab/frbr/core#Manifestation> ;
+                    rdfs:range <http://purl.org/vocab/frbr/core#Work> ;
+                    owl:propertyChainAxiom ( <http://purl.org/vocab/frbr/core#embodimentOf>
+                                             <http://purl.org/vocab/frbr/core#realizationOf>
+                                           ) ;
+                    rdfs:comment "If a performance is the embodiment of a production which is the realization of a certain work, this property creates a relation between the performance and the work." ;
+                    rdfs:label "is work embodiment of" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#manifestationComposer
+:manifestationComposer rdf:type owl:ObjectProperty ;
+                       rdfs:domain <http://purl.org/vocab/frbr/core#Manifestation> ;
+                       owl:propertyChainAxiom ( :isWorkEmbodimentOf
+                                                :hasComposer
+                                              ) ;
+                       rdfs:comment "Subproperty used to connect the name of the composer of the work to the manifestation derived from that work" ;
+                       rdfs:label "manifestation composer" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#playedCharacterIn
+:playedCharacterIn rdf:type owl:ObjectProperty ;
+                   rdfs:label "played character in" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#seasonContains
+:seasonContains rdf:type owl:ObjectProperty ;
+                rdfs:domain theatre:Season ;
+                rdfs:range [ rdf:type owl:Class ;
+                             owl:unionOf ( <http://purl.org/vocab/frbr/core#Expression>
+                                           <http://purl.org/vocab/frbr/core#Manifestation>
+                                         )
+                           ] ;
+                rdfs:comment "Defines when a season contains a production or a performance" ;
+                rdfs:label "season contains" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#wasInterpretedBy
+:wasInterpretedBy rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://schema.org/character> ;
+                  owl:propertyChainAxiom ( :characterInterpretation
+                                           :characterIsPlayedBy
+                                         ) ;
+                  rdfs:comment "This property is use to list all the actors or singers who interpreted a certain character in the course of history." ;
+                  rdfs:label "was interpreted by" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:DatatypeProperty .
+
+
+###  http://xmlns.com/foaf/0.1/title
+<http://xmlns.com/foaf/0.1/title> rdf:type owl:DatatypeProperty .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#dateOfFirstExecution
+:dateOfFirstExecution rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf dc:date ;
+                      rdfs:domain <http://purl.org/vocab/frbr/core#Work> ;
+                      rdfs:label "date of first execution" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#dateOfPerformance
+:dateOfPerformance rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf dc:date ;
+                   rdfs:label "date of performance" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#originalDate
+:originalDate rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf dc:date ;
+              rdfs:label "original date" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#original_title
+:original_title rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf dc:title ;
+                rdfs:label "original title" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#other_title
+:other_title rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf dc:title ;
+             rdfs:label "other title" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#productionType
+:productionType rdf:type owl:DatatypeProperty ;
+                rdfs:label "production type" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#role
+:role rdf:type owl:DatatypeProperty .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#sortNumber
+:sortNumber rdf:type owl:DatatypeProperty ;
+            rdfs:comment """Qualifies the sort order of a production inside a season, or a performance inside a production
+
+For example:
+The opening night of a production would be number 1.""" ;
+            rdfs:label "sorting number" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#subtitle
+:subtitle rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf dc:title .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#timeOfPerformance
+:timeOfPerformance rdf:type owl:DatatypeProperty ;
+                   rdfs:label "time of performance" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#title_reproduction
+:title_reproduction rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf dc:title ;
+                    rdfs:label "title reproduction" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#title_translation
+:title_translation rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf dc:title ;
+                   rdfs:label "title translation" .
+
+
+###  https://schema.org/additionalName
+<https://schema.org/additionalName> rdf:type owl:DatatypeProperty ;
+                                    rdfs:label "additional name" .
+
+
+###  https://schema.org/birthDate
+<https://schema.org/birthDate> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+                               rdfs:label "date of birth" .
+
+
+###  https://schema.org/birthPlace
+<https://schema.org/birthPlace> rdf:type owl:DatatypeProperty ;
+                                rdfs:label "place of birth" .
+
+
+###  https://schema.org/dateCreated
+<https://schema.org/dateCreated> rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf dc:date ;
+                                 rdfs:domain <http://purl.org/vocab/frbr/core#Work> ;
+                                 rdfs:label "date created" .
+
+
+###  https://schema.org/datePublished
+<https://schema.org/datePublished> rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf dc:date ;
+                                   rdfs:label "date published" .
+
+
+###  https://schema.org/deathDate
+<https://schema.org/deathDate> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+                               rdfs:label "date of death" .
+
+
+###  https://schema.org/deathPlace
+<https://schema.org/deathPlace> rdf:type owl:DatatypeProperty ;
+                                rdfs:label "place of death" .
+
+
+###  https://schema.org/description
+<https://schema.org/description> rdf:type owl:DatatypeProperty .
+
+
+###  https://schema.org/familyName
+<https://schema.org/familyName> rdf:type owl:DatatypeProperty ;
+                                rdfs:label "family name" .
+
+
+###  https://schema.org/genre
+<https://schema.org/genre> rdf:type owl:DatatypeProperty .
+
+
+###  https://schema.org/givenName
+<https://schema.org/givenName> rdf:type owl:DatatypeProperty ;
+                               rdfs:label "given name" .
+
+
+###  https://schema.org/sameAs
+<https://schema.org/sameAs> rdf:type owl:DatatypeProperty ;
+                            rdfs:range xsd:anyURI ;
+                            rdfs:label "same as" .
+
+
+###  https://www.wikidata.org/wiki/Property:P412
+wikidata:Property:P412 rdf:type owl:DatatypeProperty ;
+                       rdfs:label "voice type" .
+
+
+###  https://www.wikidata.org/wiki/Property:P528
+wikidata:Property:P528 rdf:type owl:DatatypeProperty ;
+                       rdfs:label "catolog code" .
+
+
+###  https://www.wikidata.org/wiki/Property:P826
+wikidata:Property:P826 rdf:type owl:DatatypeProperty ;
+                       rdfs:label "tonality" .
+
+
+###  https://www.wikidata.org/wiki/Property:P870
+wikidata:Property:P870 rdf:type owl:DatatypeProperty ;
+                       rdfs:label "instrumentation" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://lukeblaney.co.uk/semweb/theatre#Production
+theatre:Production rdf:type owl:Class ;
+                   rdfs:subClassOf <http://purl.org/vocab/frbr/core#Expression> .
+
+
+###  http://lukeblaney.co.uk/semweb/theatre#Season
+theatre:Season rdf:type owl:Class .
+
+
+###  http://purl.org/vocab/frbr/core#Concept
+<http://purl.org/vocab/frbr/core#Concept> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://purl.org/vocab/frbr/core#Subject> ;
+                                          rdfs:comment """An abstract notion or idea.
+
+The entity defined as concept encompasses a comprehensive range of abstractions that may be the subject of a work: fields of knowledge, disciplines, schools of thought (philosophies, religions, political ideologies, etc.), theories, processes, techniques, practices, etc.  A concept may be broad in nature or narrowly defined and precise. """@en ;
+                                          rdfs:label "concept"@en .
+
+
+###  http://purl.org/vocab/frbr/core#CorporateBody
+<http://purl.org/vocab/frbr/core#CorporateBody> rdf:type owl:Class ;
+                                                owl:equivalentClass <http://xmlns.com/foaf/0.1/Organization> ;
+                                                rdfs:subClassOf <http://purl.org/vocab/frbr/core#ResponsibleEntity> ;
+                                                rdfs:comment """An organization or group of individuals and/or organizations acting as a unit.
+
+The entity defined as corporate body encompasses organizations and groups of individuals and/or organizations that are identified by a particular name, including occasional groups and groups that are constituted as meetings, conferences, congresses, expeditions, exhibitions, festivals, fairs, etc."""@en ;
+                                                rdfs:label "corporate body"@en .
+
+
+###  http://purl.org/vocab/frbr/core#Endeavour
+<http://purl.org/vocab/frbr/core#Endeavour> rdf:type owl:Class ;
+                                            rdfs:comment "It describes different aspects of user interests in the products of intellectual or artistic artifact."@en ;
+                                            rdfs:label "endeavour"@en .
+
+
+###  http://purl.org/vocab/frbr/core#Expression
+<http://purl.org/vocab/frbr/core#Expression> rdf:type owl:Class ;
+                                             owl:equivalentClass [ owl:intersectionOf ( <http://purl.org/vocab/frbr/core#Endeavour>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://purl.org/vocab/frbr/core#embodiment> ;
+                                                                                          owl:someValuesFrom <http://purl.org/vocab/frbr/core#Manifestation>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                                                                          owl:someValuesFrom <http://purl.org/vocab/frbr/core#Work>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ,
+                                                                 [ owl:intersectionOf ( <http://purl.org/vocab/frbr/core#Endeavour>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://purl.org/vocab/frbr/core#part> ;
+                                                                                          owl:allValuesFrom <http://purl.org/vocab/frbr/core#Expression>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty frbr:isPartOfWork ;
+                                                                                          owl:allValuesFrom <http://purl.org/vocab/frbr/core#Expression>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                             owl:disjointWith <http://purl.org/vocab/frbr/core#Item> ,
+                                                              <http://purl.org/vocab/frbr/core#Manifestation> ,
+                                                              <http://purl.org/vocab/frbr/core#Work> ;
+                                             rdfs:comment """The intellectual or artistic realization of a work in the form of alpha-numeric, musical, or choreographic notation, sound, image, object, movement, etc., or any combination of such forms.
+
+An expression is the specific intellectual or artistic form that a work takes each time it is \"realized.\" Expression encompasses, for example, the specific words, sentences, paragraphs, etc. that result from the realization of a work in the form of a text, or the particular sounds, phrasing, etc. resulting from the realization of a musical work."""@en ;
+                                             rdfs:label "expression"@en .
+
+
+###  http://purl.org/vocab/frbr/core#Item
+<http://purl.org/vocab/frbr/core#Item> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( <http://purl.org/vocab/frbr/core#Endeavour>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://purl.org/vocab/frbr/core#exemplarOf> ;
+                                                                                    owl:someValuesFrom <http://purl.org/vocab/frbr/core#Manifestation>
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ,
+                                                           [ owl:intersectionOf ( <http://purl.org/vocab/frbr/core#Endeavour>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://purl.org/vocab/frbr/core#part> ;
+                                                                                    owl:allValuesFrom <http://purl.org/vocab/frbr/core#Item>
+                                                                                  ]
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty frbr:isPartOfWork ;
+                                                                                    owl:allValuesFrom <http://purl.org/vocab/frbr/core#Item>
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       owl:disjointWith <http://purl.org/vocab/frbr/core#Manifestation> ,
+                                                        <http://purl.org/vocab/frbr/core#Work> ;
+                                       rdfs:comment """A single exemplar of a manifestation.
+
+The entity defined as item is a concrete entity. It is in many instances a single physical object (e.g., a copy of a one-volume monograph, a single audio cassette, etc.). There are instances, however, where the entity defined as item comprises more than one physical object (e.g., a monograph issued as two separately bound volumes, a recording issued on three separate compact discs, etc.). """@en ;
+                                       rdfs:label "item"@en .
+
+
+###  http://purl.org/vocab/frbr/core#Manifestation
+<http://purl.org/vocab/frbr/core#Manifestation> rdf:type owl:Class ;
+                                                owl:equivalentClass [ owl:intersectionOf ( <http://purl.org/vocab/frbr/core#Endeavour>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://purl.org/vocab/frbr/core#embodimentOf> ;
+                                                                                             owl:someValuesFrom <http://purl.org/vocab/frbr/core#Expression>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://purl.org/vocab/frbr/core#exemplar> ;
+                                                                                             owl:someValuesFrom <http://purl.org/vocab/frbr/core#Item>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ,
+                                                                    [ owl:intersectionOf ( <http://purl.org/vocab/frbr/core#Endeavour>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://purl.org/vocab/frbr/core#part> ;
+                                                                                             owl:allValuesFrom <http://purl.org/vocab/frbr/core#Manifestation>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty frbr:isPartOfWork ;
+                                                                                             owl:allValuesFrom <http://purl.org/vocab/frbr/core#Manifestation>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                owl:disjointWith <http://purl.org/vocab/frbr/core#Work> ;
+                                                rdfs:comment """The physical embodiment of an expression of a work.
+
+The entity defined as manifestation encompasses a wide range of materials and formats. As an entity, manifestation represents all the physical objects that bear the same characteristics, in respect to both intellectual content and physical form. """@en ;
+                                                rdfs:label "manifestation"@en .
+
+
+###  http://purl.org/vocab/frbr/core#Object
+<http://purl.org/vocab/frbr/core#Object> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://purl.org/vocab/frbr/core#Subject> ;
+                                         rdfs:comment """A material thing.
+
+The entity defined as object encompasses a comprehensive range of material things that may be the subject of a work: animate and inanimate objects occurring in nature; fixed, movable, and moving objects that are the product of human creation; objects that no longer exist. """@en ;
+                                         rdfs:label "object"@en .
+
+
+###  http://purl.org/vocab/frbr/core#ResponsibleEntity
+<http://purl.org/vocab/frbr/core#ResponsibleEntity> rdf:type owl:Class ;
+                                                    rdfs:comment "It represents those responsible for the intellectual or artistic content, the physical production and dissemination, or the custodianship of any endeavour."@en ;
+                                                    rdfs:label "responsible entity"@en .
+
+
+###  http://purl.org/vocab/frbr/core#Subject
+<http://purl.org/vocab/frbr/core#Subject> rdf:type owl:Class ;
+                                          rdfs:comment "It represents an additional set of entities that serve as the subjects of works."@en ;
+                                          rdfs:label "subject"@en .
+
+
+###  http://purl.org/vocab/frbr/core#Work
+<http://purl.org/vocab/frbr/core#Work> rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( <http://purl.org/vocab/frbr/core#Endeavour>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://purl.org/vocab/frbr/core#realization> ;
+                                                                                    owl:someValuesFrom <http://purl.org/vocab/frbr/core#Expression>
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ,
+                                                           [ owl:intersectionOf ( <http://purl.org/vocab/frbr/core#Endeavour>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://purl.org/vocab/frbr/core#part> ;
+                                                                                    owl:allValuesFrom <http://purl.org/vocab/frbr/core#Work>
+                                                                                  ]
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty frbr:isPartOfWork ;
+                                                                                    owl:allValuesFrom <http://purl.org/vocab/frbr/core#Work>
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:comment """A distinct intellectual or artistic creation.
+
+A work is an abstract entity; there is no single material object one can point to as the work. We recognize the work through individual realizations or expressions of the work, but the work itself exists only in the commonality of content between and among the various expressions of the work. When we speak of Homer's Iliad as a work, our point of reference is not a particular recitation or text of the work, but the intellectual creation that lies behind all the various expressions of the work. """@en ;
+                                       rdfs:label "work"@en .
+
+
+###  http://www.w3.org/2000/10/swap/pim/contact#Person
+<http://www.w3.org/2000/10/swap/pim/contact#Person> rdf:type owl:Class ;
+                                                    owl:equivalentClass <http://xmlns.com/foaf/0.1/Person> ,
+                                                                        <https://schema.org/Person> ;
+                                                    rdfs:subClassOf <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> rdf:type owl:Class ;
+                                         owl:equivalentClass <https://schema.org/Organization> ;
+                                         rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+                                         rdfs:label "Organization (foaf:Organization)" .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+                                   rdfs:label "Person" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Building
+:Building rdf:type owl:Class ;
+          rdfs:subClassOf :Place .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#CharacterPortrayal
+:CharacterPortrayal rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :interpretationIncludedIn ;
+                                          owl:someValuesFrom <http://purl.org/vocab/frbr/core#Endeavour>
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :interpretedCharacter ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass <https://schema.org/character>
+                                        ] ;
+                    rdfs:subClassOf :Interpretation ;
+                    rdfs:comment "Use this class to describe the interpretation of a character by a person in a manifestation or expression"@en ;
+                    rdfs:label "character portrayal" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Instrument
+:Instrument rdf:type owl:Class ;
+            rdfs:subClassOf :Interpretation ;
+            rdfs:label "interpretation" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Interpretation
+:Interpretation rdf:type owl:Class .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Performance
+:Performance rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.org/vocab/frbr/core#Manifestation> .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Place
+:Place rdf:type owl:Class .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Role
+:Role rdf:type owl:Class ;
+      rdfs:subClassOf :Interpretation ;
+      rdfs:label "role" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#act
+:act rdf:type owl:Class ;
+     rdfs:subClassOf <http://purl.org/vocab/frbr/core#Work> .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#part
+:part rdf:type owl:Class ;
+      rdfs:subClassOf <http://purl.org/vocab/frbr/core#Work> .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#track
+:track rdf:type owl:Class ;
+       rdfs:subClassOf <http://purl.org/vocab/frbr/core#Work> .
+
+
+###  https://schema.org/CreativeWork
+<https://schema.org/CreativeWork> rdf:type owl:Class ;
+                                  rdfs:label "Creative work" .
+
+
+###  https://schema.org/Organization
+<https://schema.org/Organization> rdf:type owl:Class .
+
+
+###  https://schema.org/Person
+<https://schema.org/Person> rdf:type owl:Class .
+
+
+###  https://schema.org/character
+<https://schema.org/character> rdf:type owl:Class ;
+                               rdfs:subClassOf <https://schema.org/Person> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Azucena
+:Azucena rdf:type owl:NamedIndividual ,
+                  <https://schema.org/character> .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Bruno_Poet
+:Bruno_Poet rdf:type owl:NamedIndividual ,
+                     <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Claudio_Marino_Moretti
+:Claudio_Marino_Moretti rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+                        :isChorusMaster :Il_Trovatore_RECI_6281 .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Coro_Teatro_Regio
+:Coro_Teatro_Regio rdf:type owl:NamedIndividual ,
+                            <http://xmlns.com/foaf/0.1/Organization> ;
+                   :isChorusOf :Il_Trovatore_RECI_6281 .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Giuseppe_Verdi
+:Giuseppe_Verdi rdf:type owl:NamedIndividual ,
+                         <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Il_Conte_di_Luna
+:Il_Conte_di_Luna rdf:type owl:NamedIndividual ,
+                           <https://schema.org/character> .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Il_Trovatore
+:Il_Trovatore rdf:type owl:NamedIndividual ,
+                       <http://purl.org/vocab/frbr/core#Work> ;
+              :hasCharacter :Azucena ,
+                            :Il_Conte_di_Luna ;
+              :hasComposer :Giuseppe_Verdi ;
+              :hasLibrettist :Salvadore_Cammarano ;
+              <http://xmlns.com/foaf/0.1/title> "Il Trovatore (https://www.wikidata.org/wiki/Property:P1476)" ;
+              :subtitle "Dramma in 4 parti" ;
+              <https://schema.org/genre> "melodramma" ;
+              rdfs:seeAlso <http://archivi.teatroregio.torino.it/oggetti/?id=392> ;
+              skos:note "Per la gestione dei titoli delle opere sarebbe necessario prendere il titolo da Wikidata, in modo da avere uniformità." .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Il_Trovatore_PROD_33889
+:Il_Trovatore_PROD_33889 rdf:type owl:NamedIndividual ,
+                                  theatre:Production ;
+                         <http://purl.org/vocab/frbr/core#realizationOf> :Il_Trovatore ;
+                         <http://purl.org/vocab/frbr/core#realizer> :Teatro_Comunale_Bologna ;
+                         :hasDirector :Paul_Curran ;
+                         :hasLightingDesigner :Bruno_Poet ;
+                         :hasSetDesigner :Kevin_Knight ;
+                         :productionType "nuovo allestimento" ;
+                         rdfs:seeAlso <http://archivi.teatroregio.torino.it/oggetti/?id=33889&b=search> .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Il_Trovatore_RECI_6281
+:Il_Trovatore_RECI_6281 rdf:type owl:NamedIndividual ,
+                                 :Performance ;
+                        <http://purl.org/vocab/frbr/core#embodimentOf> :Il_Trovatore_PROD_33889 ;
+                        :hasBuildingOfPerformance :Teatro_Regio ;
+                        :hasPlaceOfPerformance :Torino ;
+                        :hasRelatedPerformance :Il_trovatore_RECI_6283 ;
+                        :includesInterpretation :Leo_Nucci_as_Il_Conte_di_Luna ;
+                        :sortNumber 1 ;
+                        :timeOfPerformance "20:30" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Il_trovatore_RECI_6283
+:Il_trovatore_RECI_6283 rdf:type owl:NamedIndividual ,
+                                 :Performance ;
+                        <http://purl.org/vocab/frbr/core#embodimentOf> :Il_Trovatore_PROD_33889 ;
+                        :hasBuildingOfPerformance :Teatro_Regio ;
+                        :hasFirstPerformance :Il_Trovatore_RECI_6281 ;
+                        :hasPlaceOfPerformance :Torino ;
+                        :sortNumber 3 ;
+                        :timeOfPerformance "15:00" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Intesa_Sanpaolo
+:Intesa_Sanpaolo rdf:type owl:NamedIndividual ,
+                          <http://xmlns.com/foaf/0.1/Organization> .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Kevin_Knight
+:Kevin_Knight rdf:type owl:NamedIndividual .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#La_Traviata
+:La_Traviata rdf:type owl:NamedIndividual ,
+                      <http://purl.org/vocab/frbr/core#Work> ;
+             :hasComposer :Giuseppe_Verdi ;
+             rdfs:seeAlso <http://archivi.teatroregio.torino.it/oggetti/?id=523> .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Leo_Nucci
+:Leo_Nucci rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+           :isBaritoneIn :Il_Trovatore_RECI_6281 ;
+           :role "baritono" ;
+           <https://schema.org/birthPlace> "Castiglione dei Pepoli" .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Leo_Nucci_as_Il_Conte_di_Luna
+:Leo_Nucci_as_Il_Conte_di_Luna rdf:type owl:NamedIndividual ,
+                                        :CharacterPortrayal ;
+                               :characterIsPlayedBy :Leo_Nucci ;
+                               :interpretedCharacter :Il_Conte_di_Luna .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Leonora
+:Leonora rdf:type owl:NamedIndividual ,
+                  <https://schema.org/character> ;
+         :isCharacterOf :Il_Trovatore .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Manrico
+:Manrico rdf:type owl:NamedIndividual ,
+                  <https://schema.org/character> ;
+         :isCharacterOf :Il_Trovatore .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Micaela_Carosi
+:Micaela_Carosi rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+                :isSopranoIn :Il_Trovatore_RECI_6281 .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Micaela_Carosi_as_Leonora
+:Micaela_Carosi_as_Leonora rdf:type owl:NamedIndividual ,
+                                    :CharacterPortrayal ;
+                           :characterIsPlayedBy :Micaela_Carosi ;
+                           :interpretationIncludedIn :Il_Trovatore_RECI_6281 ;
+                           :interpretedCharacter :Leonora .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Orchestra_Teatro_Regio
+:Orchestra_Teatro_Regio rdf:type owl:NamedIndividual ,
+                                 <http://xmlns.com/foaf/0.1/Organization> ;
+                        :isOrchestraOf :Il_Trovatore_RECI_6281 .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Oscar_Cecchi
+:Oscar_Cecchi rdf:type owl:NamedIndividual ,
+                       <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Paul_Curran
+:Paul_Curran rdf:type owl:NamedIndividual ,
+                      <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Rachel_Willis
+:Rachel_Willis rdf:type owl:NamedIndividual ,
+                        <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Rachel_Willis_as_Leonora
+:Rachel_Willis_as_Leonora rdf:type owl:NamedIndividual ;
+                          :characterIsPlayedBy :Rachel_Willis ;
+                          :interpretedCharacter :Leonora .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Renato_Palumbo
+:Renato_Palumbo rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+                :isConductorOf :Il_Trovatore_RECI_6281 .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Salvadore_Cammarano
+:Salvadore_Cammarano rdf:type owl:NamedIndividual ;
+                     rdfs:seeAlso <http://archivi.teatroregio.torino.it/backoffice/index.php/editor/entities/EntityEditor/Edit/Screen48/entity_id/23297> .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Teatro_Comunale_Bologna
+:Teatro_Comunale_Bologna rdf:type owl:NamedIndividual ,
+                                  <http://xmlns.com/foaf/0.1/Organization> ;
+                         :isCostumeTailoringOf :Il_Trovatore_PROD_33889 .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Teatro_Regio
+:Teatro_Regio rdf:type owl:NamedIndividual ,
+                       :Building .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Torino
+:Torino rdf:type owl:NamedIndividual ,
+                 :Place .
+
+
+###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Stagione_d'Opera_e_di_Balletto_2018-2019
+<https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Stagione_d'Opera_e_di_Balletto_2018-2019> rdf:type owl:NamedIndividual ,
+                                                                                                                                           theatre:Season ;
+                                                                                                                                  :seasonContains :Il_Trovatore_PROD_33889 ;
+                                                                                                                                  dc:title "Stagione d'opera e di balletto 2018-2019" ;
+                                                                                                                                  <https://schema.org/genre> "opera e balletto" ;
+                                                                                                                                  rdfs:label "Stagione d'opera e di balletto 2018-2019" .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#e1> rdf:type swrl:Variable .
+
+<urn:swrl:var#e2> rdf:type swrl:Variable .
+
+<urn:swrl:var#w1> rdf:type swrl:Variable .
+
+<urn:swrl:var#w2> rdf:type swrl:Variable .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://purl.org/vocab/frbr/core#abridgement> ;
+                           swrl:argument1 <urn:swrl:var#e1> ;
+                           swrl:argument2 <urn:swrl:var#e2>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                      swrl:argument1 <urn:swrl:var#e1> ;
+                                      swrl:argument2 <urn:swrl:var#w1>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                                 swrl:argument1 <urn:swrl:var#e2> ;
+                                                 swrl:argument2 <urn:swrl:var#w2>
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:SameIndividualAtom ;
+                           swrl:argument1 <urn:swrl:var#w1> ;
+                           swrl:argument2 <urn:swrl:var#w2>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://purl.org/vocab/frbr/core#adaption> ;
+                           swrl:argument1 <urn:swrl:var#e1> ;
+                           swrl:argument2 <urn:swrl:var#e2>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                      swrl:argument1 <urn:swrl:var#e1> ;
+                                      swrl:argument2 <urn:swrl:var#w1>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                                 swrl:argument1 <urn:swrl:var#e2> ;
+                                                 swrl:argument2 <urn:swrl:var#w2>
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                           swrl:argument1 <urn:swrl:var#w1> ;
+                           swrl:argument2 <urn:swrl:var#w2>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://purl.org/vocab/frbr/core#arrangement> ;
+                           swrl:argument1 <urn:swrl:var#e1> ;
+                           swrl:argument2 <urn:swrl:var#e2>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                      swrl:argument1 <urn:swrl:var#e1> ;
+                                      swrl:argument2 <urn:swrl:var#w1>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                                 swrl:argument1 <urn:swrl:var#e2> ;
+                                                 swrl:argument2 <urn:swrl:var#w2>
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:SameIndividualAtom ;
+                           swrl:argument1 <urn:swrl:var#w1> ;
+                           swrl:argument2 <urn:swrl:var#w2>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://purl.org/vocab/frbr/core#complement> ;
+                           swrl:argument1 <urn:swrl:var#e1> ;
+                           swrl:argument2 <urn:swrl:var#e2>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                      swrl:argument1 <urn:swrl:var#e1> ;
+                                      swrl:argument2 <urn:swrl:var#w1>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                                 swrl:argument1 <urn:swrl:var#e2> ;
+                                                 swrl:argument2 <urn:swrl:var#w2>
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                           swrl:argument1 <urn:swrl:var#w1> ;
+                           swrl:argument2 <urn:swrl:var#w2>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://purl.org/vocab/frbr/core#imitation> ;
+                           swrl:argument1 <urn:swrl:var#e1> ;
+                           swrl:argument2 <urn:swrl:var#e2>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                      swrl:argument1 <urn:swrl:var#e1> ;
+                                      swrl:argument2 <urn:swrl:var#w1>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                                 swrl:argument1 <urn:swrl:var#e2> ;
+                                                 swrl:argument2 <urn:swrl:var#w2>
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                           swrl:argument1 <urn:swrl:var#w1> ;
+                           swrl:argument2 <urn:swrl:var#w2>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                           swrl:argument1 <urn:swrl:var#e1> ;
+                           swrl:argument2 <urn:swrl:var#w1>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                      swrl:argument1 <urn:swrl:var#e2> ;
+                                      swrl:argument2 <urn:swrl:var#w2>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate <http://purl.org/vocab/frbr/core#revision> ;
+                                                 swrl:argument1 <urn:swrl:var#e1> ;
+                                                 swrl:argument2 <urn:swrl:var#e2>
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:SameIndividualAtom ;
+                           swrl:argument1 <urn:swrl:var#w1> ;
+                           swrl:argument2 <urn:swrl:var#w2>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                           swrl:argument1 <urn:swrl:var#e1> ;
+                           swrl:argument2 <urn:swrl:var#w1>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                      swrl:argument1 <urn:swrl:var#e2> ;
+                                      swrl:argument2 <urn:swrl:var#w2>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate <http://purl.org/vocab/frbr/core#successor> ;
+                                                 swrl:argument1 <urn:swrl:var#e1> ;
+                                                 swrl:argument2 <urn:swrl:var#e2>
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                           swrl:argument1 <urn:swrl:var#w1> ;
+                           swrl:argument2 <urn:swrl:var#w2>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                           swrl:argument1 <urn:swrl:var#e1> ;
+                           swrl:argument2 <urn:swrl:var#w1>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                      swrl:argument1 <urn:swrl:var#e2> ;
+                                      swrl:argument2 <urn:swrl:var#w2>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate <http://purl.org/vocab/frbr/core#summarization> ;
+                                                 swrl:argument1 <urn:swrl:var#e1> ;
+                                                 swrl:argument2 <urn:swrl:var#e2>
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                           swrl:argument1 <urn:swrl:var#w1> ;
+                           swrl:argument2 <urn:swrl:var#w2>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                           swrl:argument1 <urn:swrl:var#e1> ;
+                           swrl:argument2 <urn:swrl:var#w1>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                      swrl:argument1 <urn:swrl:var#e2> ;
+                                      swrl:argument2 <urn:swrl:var#w2>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate <http://purl.org/vocab/frbr/core#supplement> ;
+                                                 swrl:argument1 <urn:swrl:var#e1> ;
+                                                 swrl:argument2 <urn:swrl:var#e2>
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                           swrl:argument1 <urn:swrl:var#w1> ;
+                           swrl:argument2 <urn:swrl:var#w2>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                           swrl:argument1 <urn:swrl:var#e1> ;
+                           swrl:argument2 <urn:swrl:var#w1>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                      swrl:argument1 <urn:swrl:var#e2> ;
+                                      swrl:argument2 <urn:swrl:var#w2>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate <http://purl.org/vocab/frbr/core#transformation> ;
+                                                 swrl:argument1 <urn:swrl:var#e1> ;
+                                                 swrl:argument2 <urn:swrl:var#e2>
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                           swrl:argument1 <urn:swrl:var#w1> ;
+                           swrl:argument2 <urn:swrl:var#w2>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                           swrl:argument1 <urn:swrl:var#e1> ;
+                           swrl:argument2 <urn:swrl:var#w1>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://purl.org/vocab/frbr/core#realizationOf> ;
+                                      swrl:argument1 <urn:swrl:var#e2> ;
+                                      swrl:argument2 <urn:swrl:var#w2>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate <http://purl.org/vocab/frbr/core#translation> ;
+                                                 swrl:argument1 <urn:swrl:var#e1> ;
+                                                 swrl:argument2 <urn:swrl:var#e2>
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:SameIndividualAtom ;
+                           swrl:argument1 <urn:swrl:var#w1> ;
+                           swrl:argument2 <urn:swrl:var#w2>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
