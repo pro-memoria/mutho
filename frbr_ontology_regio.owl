@@ -2803,6 +2803,26 @@
     </DLSafeRule>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>theatre:Production</AbbreviatedIRI>
+        <Literal xml:lang="en">Production</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>theatre:Production</AbbreviatedIRI>
+        <Literal xml:lang="it">Produzione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>theatre:Season</AbbreviatedIRI>
+        <Literal xml:lang="en">Season</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>theatre:Season</AbbreviatedIRI>
+        <Literal xml:lang="it">Stagione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>theatre:part_of_season</AbbreviatedIRI>
         <Literal>is part of season</Literal>
     </AnnotationAssertion>
@@ -2824,6 +2844,11 @@ The entity defined as concept encompasses a comprehensive range of abstractions 
         <Literal xml:lang="en">An organization or group of individuals and/or organizations acting as a unit.
 
 The entity defined as corporate body encompasses organizations and groups of individuals and/or organizations that are identified by a particular name, including occasional groups and groups that are constituted as meetings, conferences, congresses, expeditions, exhibitions, festivals, fairs, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/vocab/frbr/core#CorporateBody</IRI>
+        <Literal xml:lang="it">Ente</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2865,6 +2890,11 @@ The entity defined as item is a concrete entity. It is in many instances a singl
         <Literal xml:lang="en">item</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/vocab/frbr/core#Item</IRI>
+        <Literal xml:lang="it">oggetto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.org/vocab/frbr/core#Manifestation</IRI>
         <Literal xml:lang="en">The physical embodiment of an expression of a work.
@@ -2875,6 +2905,11 @@ The entity defined as manifestation encompasses a wide range of materials and fo
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://purl.org/vocab/frbr/core#Manifestation</IRI>
         <Literal xml:lang="en">manifestation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/vocab/frbr/core#Manifestation</IRI>
+        <Literal xml:lang="it">manifestazione</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2914,6 +2949,11 @@ The entity defined as object encompasses a comprehensive range of material thing
         <Literal xml:lang="en">A distinct intellectual or artistic creation.
 
 A work is an abstract entity; there is no single material object one can point to as the work. We recognize the work through individual realizations or expressions of the work, but the work itself exists only in the commonality of content between and among the various expressions of the work. When we speak of Homer&apos;s Iliad as a work, our point of reference is not a particular recitation or text of the work, but the intellectual creation that lies behind all the various expressions of the work. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/vocab/frbr/core#Work</IRI>
+        <Literal xml:lang="it">Lavoro</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3444,6 +3484,16 @@ It allows to refer to a literal translation, in which the intent is to render th
         <Literal xml:lang="en">Unlike the FRBR version in RDF http://vocab.org/frbr/core.html the present version defines partonomy relationships transitive.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2000/10/swap/pim/contact#Person</IRI>
+        <Literal xml:lang="en">Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2000/10/swap/pim/contact#Person</IRI>
+        <Literal xml:lang="it">Persona</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <AbbreviatedIRI>skos:note</AbbreviatedIRI>
         <AbbreviatedIRI>skos:</AbbreviatedIRI>
@@ -3464,6 +3514,16 @@ It allows to refer to a literal translation, in which the intent is to render th
         <Literal>Person</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Building</IRI>
+        <Literal xml:lang="en">Building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Building</IRI>
+        <Literal xml:lang="it">Edificio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#CharacterPortrayal</IRI>
         <Literal xml:lang="en">Use this class to describe the interpretation of a character by a person in a manifestation or expression</Literal>
@@ -3471,7 +3531,12 @@ It allows to refer to a literal translation, in which the intent is to render th
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CharacterPortrayal</IRI>
-        <Literal>character portrayal</Literal>
+        <Literal xml:lang="it">Personaggio interpretato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CharacterPortrayal</IRI>
+        <Literal xml:lang="en">character portrayal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
@@ -3491,7 +3556,17 @@ It allows to refer to a literal translation, in which the intent is to render th
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Instrument</IRI>
-        <Literal>interpretation</Literal>
+        <Literal xml:lang="it">Interpretazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Instrument</IRI>
+        <Literal xml:lang="en">interpretation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Interpretation</IRI>
+        <Literal>Interpretation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
@@ -3500,13 +3575,48 @@ It allows to refer to a literal translation, in which the intent is to render th
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Performance</IRI>
+        <Literal xml:lang="en">Performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Performance</IRI>
+        <Literal xml:lang="it">Recita</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Place</IRI>
+        <Literal xml:lang="it">Luogo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Place</IRI>
+        <Literal xml:lang="en">Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Role</IRI>
-        <Literal>role</Literal>
+        <Literal xml:lang="en">role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Role</IRI>
+        <Literal xml:lang="it">ruolo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
         <IRI>#Salvadore_Cammarano</IRI>
         <IRI>http://archivi.teatroregio.torino.it/backoffice/index.php/editor/entities/EntityEditor/Edit/Screen48/entity_id/23297</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#act</IRI>
+        <Literal xml:lang="en">act</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#act</IRI>
+        <Literal xml:lang="it">recitazione</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3531,12 +3641,22 @@ It allows to refer to a literal translation, in which the intent is to render th
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#dateOfFirstExecution</IRI>
-        <Literal>date of first execution</Literal>
+        <Literal xml:lang="it">data della prima esecuzione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dateOfFirstExecution</IRI>
+        <Literal xml:lang="en">date of first execution</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#dateOfPerformance</IRI>
-        <Literal>date of performance</Literal>
+        <Literal xml:lang="it">data della recita</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dateOfPerformance</IRI>
+        <Literal xml:lang="en">date of performance</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3790,6 +3910,11 @@ embodiment</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSponsor</IRI>
+        <Literal>has sponsor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasTenor</IRI>
         <Literal>has tenor</Literal>
     </AnnotationAssertion>
@@ -4024,17 +4149,37 @@ If Leo Nucci interpreted Il Conte di Luna in a performance of Il Trovatore, such
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#originalDate</IRI>
-        <Literal>original date</Literal>
+        <Literal xml:lang="it">data originale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#originalDate</IRI>
+        <Literal xml:lang="en">original date</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#original_title</IRI>
-        <Literal>original title</Literal>
+        <Literal xml:lang="en">original title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#original_title</IRI>
+        <Literal xml:lang="it">titolo originale</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#other_title</IRI>
-        <Literal>other title</Literal>
+        <Literal xml:lang="it">altro titolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#other_title</IRI>
+        <Literal xml:lang="en">other title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#part</IRI>
+        <Literal>part</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4044,7 +4189,22 @@ If Leo Nucci interpreted Il Conte di Luna in a performance of Il Trovatore, such
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#productionType</IRI>
-        <Literal>production type</Literal>
+        <Literal xml:lang="en">production type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#productionType</IRI>
+        <Literal xml:lang="it">tipo di produzione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#role</IRI>
+        <Literal xml:lang="en">role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#role</IRI>
+        <Literal xml:lang="it">ruolo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4067,22 +4227,57 @@ The opening night of a production would be number 1.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#sortNumber</IRI>
-        <Literal>sorting number</Literal>
+        <Literal xml:lang="it">numero della recita</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sortNumber</IRI>
+        <Literal xml:lang="en">sorting number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#subtitle</IRI>
+        <Literal xml:lang="it">sottotitolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#subtitle</IRI>
+        <Literal xml:lang="en">subtitle</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#timeOfPerformance</IRI>
-        <Literal>time of performance</Literal>
+        <Literal xml:lang="it">orario della recita</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#timeOfPerformance</IRI>
+        <Literal xml:lang="en">time of performance</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#title_reproduction</IRI>
-        <Literal>title reproduction</Literal>
+        <Literal xml:lang="en">title reproduction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#title_reproduction</IRI>
+        <Literal xml:lang="it">titolo della riproduzione</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#title_translation</IRI>
-        <Literal>title translation</Literal>
+        <Literal xml:lang="en">title translation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#title_translation</IRI>
+        <Literal xml:lang="it">titolo tradotto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#track</IRI>
+        <Literal>track</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4106,48 +4301,138 @@ The opening night of a production would be number 1.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/Organization</IRI>
+        <Literal xml:lang="it">Ente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/Organization</IRI>
+        <Literal xml:lang="en">Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/Person</IRI>
+        <Literal>Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://schema.org/additionalName</IRI>
-        <Literal>additional name</Literal>
+        <Literal xml:lang="en">additional name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/additionalName</IRI>
+        <Literal xml:lang="it">nome aggiuntivo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://schema.org/birthDate</IRI>
-        <Literal>date of birth</Literal>
+        <Literal xml:lang="it">data di nascita</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/birthDate</IRI>
+        <Literal xml:lang="en">date of birth</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://schema.org/birthPlace</IRI>
-        <Literal>place of birth</Literal>
+        <Literal xml:lang="it">luogo di nascita</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/birthPlace</IRI>
+        <Literal xml:lang="en">place of birth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/character</IRI>
+        <Literal xml:lang="it">Personaggio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/character</IRI>
+        <Literal xml:lang="en">character</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://schema.org/dateCreated</IRI>
-        <Literal>date created</Literal>
+        <Literal xml:lang="it">data di creazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/dateCreated</IRI>
+        <Literal xml:lang="en">date created</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://schema.org/datePublished</IRI>
-        <Literal>date published</Literal>
+        <Literal xml:lang="it">data di pubblicazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/datePublished</IRI>
+        <Literal xml:lang="en">date published</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://schema.org/deathDate</IRI>
-        <Literal>date of death</Literal>
+        <Literal xml:lang="it">data di morte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/deathDate</IRI>
+        <Literal xml:lang="en">date of death</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://schema.org/deathPlace</IRI>
-        <Literal>place of death</Literal>
+        <Literal xml:lang="it">luogo del decesso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/deathPlace</IRI>
+        <Literal xml:lang="en">place of death</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/description</IRI>
+        <Literal xml:lang="en">description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/description</IRI>
+        <Literal xml:lang="it">descrizione</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://schema.org/familyName</IRI>
-        <Literal>family name</Literal>
+        <Literal xml:lang="it">cognome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/familyName</IRI>
+        <Literal xml:lang="en">family name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/genre</IRI>
+        <Literal xml:lang="it">genere</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/genre</IRI>
+        <Literal xml:lang="en">genre</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://schema.org/givenName</IRI>
-        <Literal>given name</Literal>
+        <Literal xml:lang="en">given name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://schema.org/givenName</IRI>
+        <Literal xml:lang="it">nome</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4157,22 +4442,42 @@ The opening night of a production would be number 1.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://www.wikidata.org/wiki/Property:P412</IRI>
-        <Literal>voice type</Literal>
+        <Literal xml:lang="it">tipo di voce</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://www.wikidata.org/wiki/Property:P412</IRI>
+        <Literal xml:lang="en">voice type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://www.wikidata.org/wiki/Property:P528</IRI>
-        <Literal>catolog code</Literal>
+        <Literal xml:lang="en">catolog code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://www.wikidata.org/wiki/Property:P528</IRI>
+        <Literal xml:lang="it">codice catalogo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://www.wikidata.org/wiki/Property:P826</IRI>
-        <Literal>tonality</Literal>
+        <Literal xml:lang="en">tonality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://www.wikidata.org/wiki/Property:P826</IRI>
+        <Literal xml:lang="it">tonalità</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://www.wikidata.org/wiki/Property:P870</IRI>
-        <Literal>instrumentation</Literal>
+        <Literal xml:lang="en">instrumentation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://www.wikidata.org/wiki/Property:P870</IRI>
+        <Literal xml:lang="it">strumento</Literal>
     </AnnotationAssertion>
 </Ontology>
 
