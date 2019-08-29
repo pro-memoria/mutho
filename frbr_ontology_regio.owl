@@ -637,6 +637,9 @@
         <DataProperty IRI="https://schema.org/givenName"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="https://schema.org/image"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="https://schema.org/sameAs"/>
     </Declaration>
     <Declaration>
@@ -2522,6 +2525,10 @@
         <DataProperty IRI="https://schema.org/deathDate"/>
         <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="https://schema.org/image"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="https://schema.org/sameAs"/>
         <Datatype abbreviatedIRI="xsd:anyURI"/>
