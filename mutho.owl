@@ -1,19 +1,20 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio"
+     xml:base="https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio"
-     versionIRI="https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio">
-    <Prefix name="" IRI="https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#"/>
+     ontologyIRI="https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho"
+     versionIRI="https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho">
+    <Prefix name="" IRI="https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho/"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="frbr" IRI="http://vocab.org/frbr/extended#"/>
+    <Prefix name="obda" IRI="https://w3id.org/obda/vocabulary#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/2008/05/skos#"/>
     <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
@@ -46,7 +47,7 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:title"/>
-        <Literal xml:lang="en">Music and Theatre Ontology in OWL2</Literal>
+        <Literal xml:lang="en">MUTHO: The Music and Theatre Ontology</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -56,7 +57,7 @@
 
 **Creators**: Stefano Trinchero
 
-**Contributors:**: Luca Montanera &amp; Simone Cullino, Angelo La Gorga, Andrea Calzolari
+**Contributors:**: Luca Montanera, Simone Cullino, Angelo La Gorga, Andrea Calzolari
 **License:**
 
 **Website:** https://github.com/pro-memoria/opereontology</Literal>

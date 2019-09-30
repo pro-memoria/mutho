@@ -1,11 +1,12 @@
 [PrefixDeclaration]
-:		https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#
+:		https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho/
 dc:		http://purl.org/dc/elements/1.1/
 owl:		http://www.w3.org/2002/07/owl#
 rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
 xml:		http://www.w3.org/XML/1998/namespace
 xsd:		http://www.w3.org/2001/XMLSchema#
 frbr:		http://vocab.org/frbr/extended#
+obda:		https://w3id.org/obda/vocabulary#
 rdfs:		http://www.w3.org/2000/01/rdf-schema#
 skos:		http://www.w3.org/2008/05/skos#
 swrl:		http://www.w3.org/2003/11/swrl#

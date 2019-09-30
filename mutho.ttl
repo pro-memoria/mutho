@@ -1,39 +1,40 @@
-@prefix : <https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#> .
+@prefix : <https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix frbr: <http://vocab.org/frbr/extended#> .
+@prefix obda: <https://w3id.org/obda/vocabulary#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2008/05/skos#> .
 @prefix swrl: <http://www.w3.org/2003/11/swrl#> .
 @prefix opere: <http://purl.org/spar/frbr/opereonthology#> .
 @prefix theatre: <http://lukeblaney.co.uk/semweb/theatre#> .
 @prefix wikidata: <https://www.wikidata.org/wiki/> .
-@base <https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio> .
+@base <https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho> .
 
-<https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio> rdf:type owl:Ontology ;
-                                                                                          owl:versionIRI <https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio> ;
-                                                                                          dc:contributor "Luca Montanera" ,
-                                                                                                         "Simone Cullino" ;
-                                                                                          dc:creator "Stefano Trinchero" ;
-                                                                                          dc:date "2019-07-15" ;
-                                                                                          dc:description "This vocabulary is an expression in OWL 2 DL of the basic concepts and relations existing in music and theatre topics."@en ;
-                                                                                          dc:rights "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)."@en ;
-                                                                                          dc:title "Music and Theatre Ontology in OWL2"@en ;
-                                                                                          rdfs:comment """This vocabulary is an expression in OWL 2 DL of the basic concepts and relations existing in music and theatre topics.
+<https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho> rdf:type owl:Ontology ;
+                                                                    owl:versionIRI <https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho> ;
+                                                                    dc:contributor "Luca Montanera" ,
+                                                                                   "Simone Cullino" ;
+                                                                    dc:creator "Stefano Trinchero" ;
+                                                                    dc:date "2019-07-15" ;
+                                                                    dc:description "This vocabulary is an expression in OWL 2 DL of the basic concepts and relations existing in music and theatre topics."@en ;
+                                                                    dc:rights "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)."@en ;
+                                                                    dc:title "MUTHO: The Music and Theatre Ontology"@en ;
+                                                                    rdfs:comment """This vocabulary is an expression in OWL 2 DL of the basic concepts and relations existing in music and theatre topics.
 
 **URL:** http://purl.org/spar/frbr
 
 **Creators**: Stefano Trinchero
 
-**Contributors:**: Luca Montanera & Simone Cullino, Angelo La Gorga, Andrea Calzolari
+**Contributors:**: Luca Montanera, Simone Cullino, Angelo La Gorga, Andrea Calzolari
 **License:**
 
 **Website:** https://github.com/pro-memoria/opereontology""" ;
-                                                                                          rdfs:seeAlso "Company : Promemoria S.R.L. <https://www.promemoriagroup.com/it>" ;
-                                                                                          owl:versionInfo "1.0.1" .
+                                                                    rdfs:seeAlso "Company : Promemoria S.R.L. <https://www.promemoriagroup.com/it>" ;
+                                                                    owl:versionInfo "1.0.1" .
 
 #################################################################
 #    Annotation properties
@@ -610,7 +611,7 @@ frbr:isPartOfWork rdf:type owl:ObjectProperty ;
                   skos:note "Unlike the FRBR version in RDF http://vocab.org/frbr/core.html the present version defines partonomy relationships transitive."@en .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#characterInterpretation
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#characterInterpretation
 :characterInterpretation rdf:type owl:ObjectProperty ;
                          owl:inverseOf :interpretedCharacter ;
                          rdfs:domain <https://schema.org/character> ;
@@ -618,7 +619,7 @@ frbr:isPartOfWork rdf:type owl:ObjectProperty ;
                          rdfs:label "character interpretation" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#characterIsPlayedBy
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#characterIsPlayedBy
 :characterIsPlayedBy rdf:type owl:ObjectProperty ;
                      owl:inverseOf :hasCharacterPortrayal ;
                      rdfs:domain :CharacterPortrayal ;
@@ -627,7 +628,7 @@ frbr:isPartOfWork rdf:type owl:ObjectProperty ;
                      rdfs:label "character played by" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#expressionComposer
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#expressionComposer
 :expressionComposer rdf:type owl:ObjectProperty ;
                     rdfs:domain <http://purl.org/vocab/frbr/core#Expression> ;
                     owl:propertyChainAxiom ( <http://purl.org/vocab/frbr/core#realizationOf>
@@ -637,20 +638,20 @@ frbr:isPartOfWork rdf:type owl:ObjectProperty ;
                     rdfs:label "expression composer" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasActor
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasActor
 :hasActor rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :hasIntepreter ;
           rdfs:label "has actor" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasAssistantDirector
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasAssistantDirector
 :hasAssistantDirector rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
                       owl:inverseOf :isAssistantDirectorOf ;
                       rdfs:label "has assistant director" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasAuthorOfTheLiteraryWork
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasAuthorOfTheLiteraryWork
 :hasAuthorOfTheLiteraryWork rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#creator> ;
                             rdfs:comment """This property defines the author of a literary work that inspired a work. 
@@ -660,7 +661,7 @@ Giuseppe Verdi is the composer of the opera \"Otello\", Arrigo Boito is the libr
                             rdfs:label "has author of the literary work" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasBaritone
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasBaritone
 :hasBaritone rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :hasIntepreter ;
              owl:inverseOf :isBaritoneIn ;
@@ -673,14 +674,14 @@ Giuseppe Verdi is the composer of the opera \"Otello\", Arrigo Boito is the libr
              rdfs:label "has baritone" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasBass
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasBass
 :hasBass rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf :hasIntepreter ;
          owl:inverseOf :isBassIn ;
          rdfs:label "has bass" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasBuildingOfFirstPerformance
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasBuildingOfFirstPerformance
 :hasBuildingOfFirstPerformance rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf :hasPlaceOfFirstPerformance ;
                                owl:inverseOf :isBuildingOfFirstPerformance ;
@@ -688,7 +689,7 @@ Giuseppe Verdi is the composer of the opera \"Otello\", Arrigo Boito is the libr
                                rdfs:label "has building of first performance" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasBuildingOfPerformance
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasBuildingOfPerformance
 :hasBuildingOfPerformance rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf :hasPlaceOfPerformance ;
                           owl:inverseOf :isBuildingOfPerformance ;
@@ -696,7 +697,7 @@ Giuseppe Verdi is the composer of the opera \"Otello\", Arrigo Boito is the libr
                           rdfs:label "has building of performance" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasCharacter
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasCharacter
 :hasCharacter rdf:type owl:ObjectProperty ;
               owl:inverseOf :isCharacterOf ;
               rdfs:domain <http://purl.org/vocab/frbr/core#Work> ;
@@ -708,7 +709,7 @@ Example:
               rdfs:label "has character" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasCharacterPortrayal
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasCharacterPortrayal
 :hasCharacterPortrayal rdf:type owl:ObjectProperty ;
                        rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
                        rdfs:range :Interpretation ;
@@ -716,26 +717,26 @@ Example:
                        rdfs:label "has character portrayal" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasChoreographer
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasChoreographer
 :hasChoreographer rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
                   rdfs:label "has choreographer" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasChorus
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasChorus
 :hasChorus rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
            rdfs:label "has chorus" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasChorusMaster
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasChorusMaster
 :hasChorusMaster rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
                  owl:inverseOf :isChorusMaster ;
                  rdfs:label "has chorus master" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasComposer
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasComposer
 :hasComposer rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#creator> ;
              owl:inverseOf :isComposerOf ;
@@ -743,69 +744,69 @@ Example:
              rdfs:label "has composer" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasConductor
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasConductor
 :hasConductor rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
               owl:inverseOf :isConductorOf ;
               rdfs:label "has conductor" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasContralto
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasContralto
 :hasContralto rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :hasIntepreter ;
               owl:inverseOf :isContraltoIn ;
               rdfs:label "has contralto" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasCostumeTailoring
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasCostumeTailoring
 :hasCostumeTailoring rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
                      owl:inverseOf :isCostumeTailoringOf ;
                      rdfs:label "has costumes tailoring" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasCostumesDesigner
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasCostumesDesigner
 :hasCostumesDesigner rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
                      owl:inverseOf :isCostumesDesignerOf ;
                      rdfs:label "has costumes designer" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasCountertenor
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasCountertenor
 :hasCountertenor rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :hasIntepreter ;
                  rdfs:label "has countertenor" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasDirector
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasDirector
 :hasDirector rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
              owl:inverseOf :isDirectorOf ;
              rdfs:label "has director" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasEquipmentSupplier
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasEquipmentSupplier
 :hasEquipmentSupplier rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
                       owl:inverseOf :isEquipmentSupplier ;
                       rdfs:label "has equipment supplier" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasFirstPerformance
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasFirstPerformance
 :hasFirstPerformance rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
                      owl:inverseOf :isFirstPerformance ;
                      rdfs:label "has first performance" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasIntepreter
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasIntepreter
 :hasIntepreter rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
                owl:inverseOf :isIntepreterIn ;
                rdfs:label "has interpreter" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasInterpreted
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasInterpreted
 :hasInterpreted rdf:type owl:ObjectProperty ;
                 owl:inverseOf :wasInterpretedBy ;
                 rdfs:domain <https://schema.org/character> ;
@@ -817,7 +818,7 @@ If Micaela Carosi interpreted the character of \"Leonora\" from Il Trovatore by 
                 rdfs:label "has interpreted" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasLibrettist
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasLibrettist
 :hasLibrettist rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#creator> ;
                owl:inverseOf :isLibrettistOf ;
@@ -825,14 +826,14 @@ If Micaela Carosi interpreted the character of \"Leonora\" from Il Trovatore by 
                rdfs:label "has librettist" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasLightingDesigner
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasLightingDesigner
 :hasLightingDesigner rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
                      owl:inverseOf :isLightingDesignerOf ;
                      rdfs:label "has lighting designer" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasManifestationEmbodiment
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasManifestationEmbodiment
 :hasManifestationEmbodiment rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
                             owl:inverseOf :isWorkEmbodimentOf ;
@@ -842,28 +843,28 @@ If Micaela Carosi interpreted the character of \"Leonora\" from Il Trovatore by 
 embodiment""" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasMezzosoprano
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasMezzosoprano
 :hasMezzosoprano rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :hasIntepreter ;
                  owl:inverseOf :isMezzosopranoIn ;
                  rdfs:label "has mezzosoprano" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasMusician
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasMusician
 :hasMusician rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :hasIntepreter ;
              owl:inverseOf :isMusician ;
              rdfs:label "has musician" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasOrchestra
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasOrchestra
 :hasOrchestra rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
               owl:inverseOf :isOrchestraOf ;
               rdfs:label "has orchestra" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasPlaceOfFirstPerformance
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasPlaceOfFirstPerformance
 :hasPlaceOfFirstPerformance rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf :hasPlaceOfPerformance ;
                             owl:inverseOf :isPlaceOfFirstPerformance ;
@@ -871,14 +872,14 @@ embodiment""" .
                             rdfs:label "has place of first performance" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasPlaceOfPerformance
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasPlaceOfPerformance
 :hasPlaceOfPerformance rdf:type owl:ObjectProperty ;
                        owl:inverseOf :isPlaceOfPerformance ;
                        rdfs:comment "Defines the place (city) where the performance took place." ;
                        rdfs:label "has place of performance" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasRelatedPerformance
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasRelatedPerformance
 :hasRelatedPerformance rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
                        rdfs:domain :Performance ;
@@ -886,47 +887,48 @@ embodiment""" .
                        rdfs:label "has related performance" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasSetDesigner
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasSetDesigner
 :hasSetDesigner rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
                 owl:inverseOf :isSetDesignerOf ;
                 rdfs:label "has set designer" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasShoesManifacturer
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasShoesManifacturer
 :hasShoesManifacturer rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
                       rdfs:label "has shoes manifacturer" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasSoprano
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasSoprano
 :hasSoprano rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :hasIntepreter ;
             owl:inverseOf :isSopranoIn ;
             rdfs:label "has soprano" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasSponsor
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasSponsor
 :hasSponsor rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#producer> ;
             owl:inverseOf :isSponsorOf ;
-            rdfs:comment "Defines the sponsoring organization of a production." .
+            rdfs:comment "Defines the sponsoring organization of a production." ;
+            rdfs:label "has sponsor" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasTenor
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasTenor
 :hasTenor rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :hasIntepreter ;
           owl:inverseOf :isTenorIn ;
           rdfs:label "has tenor" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#hasWigsSupplier
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#hasWigsSupplier
 :hasWigsSupplier rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizer> ;
                  rdfs:label "has wigs supplier" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#includesInterpretation
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#includesInterpretation
 :includesInterpretation rdf:type owl:ObjectProperty ;
                         owl:inverseOf :interpretationIncludedIn ;
                         rdfs:domain [ rdf:type owl:Class ;
@@ -942,136 +944,136 @@ If Leo Nucci interpreted Il Conte di Luna in a performance of Il Trovatore, such
                         rdfs:label "includes interpretation" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#interpretationIncludedIn
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#interpretationIncludedIn
 :interpretationIncludedIn rdf:type owl:ObjectProperty ;
                           rdfs:domain :Interpretation ;
                           rdfs:range <http://purl.org/vocab/frbr/core#Endeavour> ;
                           rdfs:label "interpretation included in" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#interpretedCharacter
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#interpretedCharacter
 :interpretedCharacter rdf:type owl:ObjectProperty ;
                       rdfs:domain :CharacterPortrayal ;
                       rdfs:range <https://schema.org/character> ;
                       rdfs:label "interpreted character" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isActorIn
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isActorIn
 :isActorIn rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :isIntepreterIn ;
            rdfs:label "is actor in" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isAssistantDirectorOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isAssistantDirectorOf
 :isAssistantDirectorOf rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
                        rdfs:label "is assistant director of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isAuthorOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isAuthorOf
 :isAuthorOf rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#creatorOf> ;
             rdfs:label "is author of" ,
                        "is author of the literary work" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isBaritoneIn
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isBaritoneIn
 :isBaritoneIn rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :isIntepreterIn ;
               rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
               rdfs:label "is baritone in" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isBassIn
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isBassIn
 :isBassIn rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :isIntepreterIn ;
           rdfs:label "is bass in" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isBuildingOfFirstPerformance
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isBuildingOfFirstPerformance
 :isBuildingOfFirstPerformance rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf :isPlaceOfFirstPerformance ;
                               rdfs:label "is building of first performance" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isBuildingOfPerformance
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isBuildingOfPerformance
 :isBuildingOfPerformance rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf :isPlaceOfPerformance ;
                          rdfs:label "is building of performance" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isCharacterOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isCharacterOf
 :isCharacterOf rdf:type owl:ObjectProperty ;
                rdfs:label "is charachter of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isChoreographerOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isChoreographerOf
 :isChoreographerOf rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
                    rdfs:label "is choreographer of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isChorusMaster
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isChorusMaster
 :isChorusMaster rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
                 rdfs:label "is chorus master" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isChorusOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isChorusOf
 :isChorusOf rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
             rdfs:label "is chorus of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isComposerOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isComposerOf
 :isComposerOf rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#creatorOf> ;
               rdfs:label "is composer of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isConductorOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isConductorOf
 :isConductorOf rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
                rdfs:label "is conductor of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isContraltoIn
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isContraltoIn
 :isContraltoIn rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :isIntepreterIn ;
                rdfs:label "is coltralto in" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isCostumeTailoringOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isCostumeTailoringOf
 :isCostumeTailoringOf rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
                       rdfs:label "is costume tailoring of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isCostumesDesignerOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isCostumesDesignerOf
 :isCostumesDesignerOf rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
                       rdfs:label "is costume designer of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isCountertenorIn
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isCountertenorIn
 :isCountertenorIn rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :isIntepreterIn ;
                   rdfs:label "is countertenor in" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isDirectorOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isDirectorOf
 :isDirectorOf rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
               rdfs:label "is director of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isEquipmentSupplier
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isEquipmentSupplier
 :isEquipmentSupplier rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
                      rdfs:label "is equipment supplier" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isFirstPerformance
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isFirstPerformance
 :isFirstPerformance rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
                     rdfs:domain [ rdf:type owl:Class ;
@@ -1088,50 +1090,50 @@ If Leo Nucci interpreted Il Conte di Luna in a performance of Il Trovatore, such
                     rdfs:label "is first performance" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isIntepreterIn
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isIntepreterIn
 :isIntepreterIn rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
                 rdfs:label "is interpreter in" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isLibrettistOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isLibrettistOf
 :isLibrettistOf rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#creatorOf> ;
                 rdfs:label "is librettist of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isLightingDesignerOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isLightingDesignerOf
 :isLightingDesignerOf rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
                       rdfs:label "is lighting designer of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isMezzosopranoIn
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isMezzosopranoIn
 :isMezzosopranoIn rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :isIntepreterIn ;
                   rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
                   rdfs:label "is mezzosoprano in" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isMusician
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isMusician
 :isMusician rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :isIntepreterIn ;
             rdfs:label "is musician in" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isOrchestraOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isOrchestraOf
 :isOrchestraOf rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
                rdfs:label "is orchestra of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isPlaceOfFirstPerformance
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isPlaceOfFirstPerformance
 :isPlaceOfFirstPerformance rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf :isPlaceOfPerformance ;
                            rdfs:label "is place of first performance" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isPlaceOfPerformance
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isPlaceOfPerformance
 :isPlaceOfPerformance rdf:type owl:ObjectProperty ;
                       rdfs:domain :Place ;
                       rdfs:range [ rdf:type owl:Class ;
@@ -1143,44 +1145,44 @@ If Leo Nucci interpreted Il Conte di Luna in a performance of Il Trovatore, such
                       rdfs:label "is place of performance" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isSetDesignerOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isSetDesignerOf
 :isSetDesignerOf rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
                  rdfs:label "is set designer of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isShoesManifacturerOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isShoesManifacturerOf
 :isShoesManifacturerOf rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
                        rdfs:label "is shoes manifacturer of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isSopranoIn
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isSopranoIn
 :isSopranoIn rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :isIntepreterIn ;
              rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
              rdfs:label "is soprano in" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isSponsorOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isSponsorOf
 :isSponsorOf rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#producerOf> ;
              rdfs:label "is sponsor of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isTenorIn
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isTenorIn
 :isTenorIn rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :isIntepreterIn ;
            rdfs:label "is tenor in" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isWigsSupplier
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isWigsSupplier
 :isWigsSupplier rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#realizerOf> ;
                 rdfs:label "is wigs supplier" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#isWorkEmbodimentOf
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#isWorkEmbodimentOf
 :isWorkEmbodimentOf rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf <http://purl.org/vocab/frbr/core#relatedEndeavour> ;
                     rdfs:domain <http://purl.org/vocab/frbr/core#Manifestation> ;
@@ -1192,7 +1194,7 @@ If Leo Nucci interpreted Il Conte di Luna in a performance of Il Trovatore, such
                     rdfs:label "is work embodiment of" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#manifestationComposer
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#manifestationComposer
 :manifestationComposer rdf:type owl:ObjectProperty ;
                        rdfs:domain <http://purl.org/vocab/frbr/core#Manifestation> ;
                        owl:propertyChainAxiom ( :isWorkEmbodimentOf
@@ -1202,12 +1204,12 @@ If Leo Nucci interpreted Il Conte di Luna in a performance of Il Trovatore, such
                        rdfs:label "manifestation composer" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#playedCharacterIn
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#playedCharacterIn
 :playedCharacterIn rdf:type owl:ObjectProperty ;
                    rdfs:label "played character in" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#seasonContains
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#seasonContains
 :seasonContains rdf:type owl:ObjectProperty ;
                 rdfs:domain theatre:Season ;
                 rdfs:range [ rdf:type owl:Class ;
@@ -1219,7 +1221,7 @@ If Leo Nucci interpreted Il Conte di Luna in a performance of Il Trovatore, such
                 rdfs:label "season contains" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#wasInterpretedBy
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#wasInterpretedBy
 :wasInterpretedBy rdf:type owl:ObjectProperty ;
                   rdfs:domain <https://schema.org/character> ;
                   owl:propertyChainAxiom ( :characterInterpretation
@@ -1245,133 +1247,165 @@ dc:title rdf:type owl:DatatypeProperty .
 <http://xmlns.com/foaf/0.1/title> rdf:type owl:DatatypeProperty .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#dateOfFirstExecution
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#dateOfFirstExecution
 :dateOfFirstExecution rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf dc:date ;
                       rdfs:domain <http://purl.org/vocab/frbr/core#Work> ;
-                      rdfs:label "date of first execution" .
+                      rdfs:label "data della prima esecuzione"@it ,
+                                 "date of first execution"@en .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#dateOfPerformance
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#dateOfPerformance
 :dateOfPerformance rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf dc:date ;
-                   rdfs:label "date of performance" .
+                   rdfs:label "data della recita"@it ,
+                              "date of performance"@en .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#originalDate
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#originalDate
 :originalDate rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf dc:date ;
-              rdfs:label "original date" .
+              rdfs:label "data originale"@it ,
+                         "original date"@en .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#original_title
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#original_title
 :original_title rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf dc:title ;
-                rdfs:label "original title" .
+                rdfs:label "original title"@en ,
+                           "titolo originale"@it .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#other_title
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#other_title
 :other_title rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf dc:title ;
-             rdfs:label "other title" .
+             rdfs:label "altro titolo"@it ,
+                        "other title"@en .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#productionType
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#productionType
 :productionType rdf:type owl:DatatypeProperty ;
-                rdfs:label "production type" .
+                rdfs:label "production type"@en ,
+                           "tipo di produzione"@it .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#role
-:role rdf:type owl:DatatypeProperty .
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#role
+:role rdf:type owl:DatatypeProperty ;
+      rdfs:label "role"@en ,
+                 "ruolo"@it .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#sortNumber
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#sortNumber
 :sortNumber rdf:type owl:DatatypeProperty ;
             rdfs:comment """Qualifies the sort order of a production inside a season, or a performance inside a production
 
 For example:
 The opening night of a production would be number 1.""" ;
-            rdfs:label "sorting number" .
+            rdfs:label "numero della recita"@it ,
+                       "sorting number"@en .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#subtitle
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#subtitle
 :subtitle rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf dc:title .
+          rdfs:subPropertyOf dc:title ;
+          rdfs:label "sottotitolo"@it ,
+                     "subtitle"@en .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#timeOfPerformance
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#timeOfPerformance
 :timeOfPerformance rdf:type owl:DatatypeProperty ;
-                   rdfs:label "time of performance" .
+                   rdfs:label "orario della recita"@it ,
+                              "time of performance"@en .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#title_reproduction
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#title_reproduction
 :title_reproduction rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf dc:title ;
-                    rdfs:label "title reproduction" .
+                    rdfs:label "title reproduction"@en ,
+                               "titolo della riproduzione"@it .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#title_translation
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#title_translation
 :title_translation rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf dc:title ;
-                   rdfs:label "title translation" .
+                   rdfs:label "title translation"@en ,
+                              "titolo tradotto"@it .
 
 
 ###  https://schema.org/additionalName
 <https://schema.org/additionalName> rdf:type owl:DatatypeProperty ;
-                                    rdfs:label "additional name" .
+                                    rdfs:label "additional name"@en ,
+                                               "nome aggiuntivo"@it .
 
 
 ###  https://schema.org/birthDate
 <https://schema.org/birthDate> rdf:type owl:DatatypeProperty ;
                                rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
-                               rdfs:label "date of birth" .
+                               rdfs:label "data di nascita"@it ,
+                                          "date of birth"@en .
 
 
 ###  https://schema.org/birthPlace
 <https://schema.org/birthPlace> rdf:type owl:DatatypeProperty ;
-                                rdfs:label "place of birth" .
+                                rdfs:label "luogo di nascita"@it ,
+                                           "place of birth"@en .
 
 
 ###  https://schema.org/dateCreated
 <https://schema.org/dateCreated> rdf:type owl:DatatypeProperty ;
                                  rdfs:subPropertyOf dc:date ;
                                  rdfs:domain <http://purl.org/vocab/frbr/core#Work> ;
-                                 rdfs:label "date created" .
+                                 rdfs:label "data di creazione"@it ,
+                                            "date created"@en .
 
 
 ###  https://schema.org/datePublished
 <https://schema.org/datePublished> rdf:type owl:DatatypeProperty ;
                                    rdfs:subPropertyOf dc:date ;
-                                   rdfs:label "date published" .
+                                   rdfs:label "data di pubblicazione"@it ,
+                                              "date published"@en .
 
 
 ###  https://schema.org/deathDate
 <https://schema.org/deathDate> rdf:type owl:DatatypeProperty ;
                                rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
-                               rdfs:label "date of death" .
+                               rdfs:label "data di morte"@it ,
+                                          "date of death"@en .
 
 
 ###  https://schema.org/deathPlace
 <https://schema.org/deathPlace> rdf:type owl:DatatypeProperty ;
-                                rdfs:label "place of death" .
+                                rdfs:label "luogo del decesso"@it ,
+                                           "place of death"@en .
 
 
 ###  https://schema.org/description
-<https://schema.org/description> rdf:type owl:DatatypeProperty .
+<https://schema.org/description> rdf:type owl:DatatypeProperty ;
+                                 rdfs:label "description"@en ,
+                                            "descrizione"@it .
 
 
 ###  https://schema.org/familyName
 <https://schema.org/familyName> rdf:type owl:DatatypeProperty ;
-                                rdfs:label "family name" .
+                                rdfs:label "cognome"@it ,
+                                           "family name"@en .
 
 
 ###  https://schema.org/genre
-<https://schema.org/genre> rdf:type owl:DatatypeProperty .
+<https://schema.org/genre> rdf:type owl:DatatypeProperty ;
+                           rdfs:label "genere"@it ,
+                                      "genre"@en .
 
 
 ###  https://schema.org/givenName
 <https://schema.org/givenName> rdf:type owl:DatatypeProperty ;
-                               rdfs:label "given name" .
+                               rdfs:label "given name"@en ,
+                                          "nome"@it .
+
+
+###  https://schema.org/image
+<https://schema.org/image> rdf:type owl:DatatypeProperty ;
+                           rdfs:range xsd:anyURI .
 
 
 ###  https://schema.org/sameAs
@@ -1382,22 +1416,26 @@ The opening night of a production would be number 1.""" ;
 
 ###  https://www.wikidata.org/wiki/Property:P412
 wikidata:Property:P412 rdf:type owl:DatatypeProperty ;
-                       rdfs:label "voice type" .
+                       rdfs:label "tipo di voce"@it ,
+                                  "voice type"@en .
 
 
 ###  https://www.wikidata.org/wiki/Property:P528
 wikidata:Property:P528 rdf:type owl:DatatypeProperty ;
-                       rdfs:label "catolog code" .
+                       rdfs:label "catolog code"@en ,
+                                  "codice catalogo"@it .
 
 
 ###  https://www.wikidata.org/wiki/Property:P826
 wikidata:Property:P826 rdf:type owl:DatatypeProperty ;
-                       rdfs:label "tonality" .
+                       rdfs:label "tonality"@en ,
+                                  "tonalità"@it .
 
 
 ###  https://www.wikidata.org/wiki/Property:P870
 wikidata:Property:P870 rdf:type owl:DatatypeProperty ;
-                       rdfs:label "instrumentation" .
+                       rdfs:label "instrumentation"@en ,
+                                  "strumento"@it .
 
 
 #################################################################
@@ -1406,11 +1444,15 @@ wikidata:Property:P870 rdf:type owl:DatatypeProperty ;
 
 ###  http://lukeblaney.co.uk/semweb/theatre#Production
 theatre:Production rdf:type owl:Class ;
-                   rdfs:subClassOf <http://purl.org/vocab/frbr/core#Expression> .
+                   rdfs:subClassOf <http://purl.org/vocab/frbr/core#Expression> ;
+                   rdfs:label "Production"@en ,
+                              "Produzione"@it .
 
 
 ###  http://lukeblaney.co.uk/semweb/theatre#Season
-theatre:Season rdf:type owl:Class .
+theatre:Season rdf:type owl:Class ;
+               rdfs:label "Season"@en ,
+                          "Stagione"@it .
 
 
 ###  http://purl.org/vocab/frbr/core#Concept
@@ -1429,7 +1471,8 @@ The entity defined as concept encompasses a comprehensive range of abstractions 
                                                 rdfs:comment """An organization or group of individuals and/or organizations acting as a unit.
 
 The entity defined as corporate body encompasses organizations and groups of individuals and/or organizations that are identified by a particular name, including occasional groups and groups that are constituted as meetings, conferences, congresses, expeditions, exhibitions, festivals, fairs, etc."""@en ;
-                                                rdfs:label "corporate body"@en .
+                                                rdfs:label "Ente"@it ,
+                                                           "corporate body"@en .
 
 
 ###  http://purl.org/vocab/frbr/core#Endeavour
@@ -1500,7 +1543,8 @@ An expression is the specific intellectual or artistic form that a work takes ea
                                        rdfs:comment """A single exemplar of a manifestation.
 
 The entity defined as item is a concrete entity. It is in many instances a single physical object (e.g., a copy of a one-volume monograph, a single audio cassette, etc.). There are instances, however, where the entity defined as item comprises more than one physical object (e.g., a monograph issued as two separately bound volumes, a recording issued on three separate compact discs, etc.). """@en ;
-                                       rdfs:label "item"@en .
+                                       rdfs:label "item"@en ,
+                                                  "oggetto"@it .
 
 
 ###  http://purl.org/vocab/frbr/core#Manifestation
@@ -1533,7 +1577,8 @@ The entity defined as item is a concrete entity. It is in many instances a singl
                                                 rdfs:comment """The physical embodiment of an expression of a work.
 
 The entity defined as manifestation encompasses a wide range of materials and formats. As an entity, manifestation represents all the physical objects that bear the same characteristics, in respect to both intellectual content and physical form. """@en ;
-                                                rdfs:label "manifestation"@en .
+                                                rdfs:label "manifestation"@en ,
+                                                           "manifestazione"@it .
 
 
 ###  http://purl.org/vocab/frbr/core#Object
@@ -1582,14 +1627,17 @@ The entity defined as object encompasses a comprehensive range of material thing
                                        rdfs:comment """A distinct intellectual or artistic creation.
 
 A work is an abstract entity; there is no single material object one can point to as the work. We recognize the work through individual realizations or expressions of the work, but the work itself exists only in the commonality of content between and among the various expressions of the work. When we speak of Homer's Iliad as a work, our point of reference is not a particular recitation or text of the work, but the intellectual creation that lies behind all the various expressions of the work. """@en ;
-                                       rdfs:label "work"@en .
+                                       rdfs:label "Lavoro"@it ,
+                                                  "work"@en .
 
 
 ###  http://www.w3.org/2000/10/swap/pim/contact#Person
 <http://www.w3.org/2000/10/swap/pim/contact#Person> rdf:type owl:Class ;
                                                     owl:equivalentClass <http://xmlns.com/foaf/0.1/Person> ,
                                                                         <https://schema.org/Person> ;
-                                                    rdfs:subClassOf <http://purl.org/vocab/frbr/core#ResponsibleEntity> .
+                                                    rdfs:subClassOf <http://purl.org/vocab/frbr/core#ResponsibleEntity> ;
+                                                    rdfs:label "Person"@en ,
+                                                               "Persona"@it .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
@@ -1609,12 +1657,14 @@ A work is an abstract entity; there is no single material object one can point t
                                    rdfs:label "Person" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Building
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Building
 :Building rdf:type owl:Class ;
-          rdfs:subClassOf :Place .
+          rdfs:subClassOf :Place ;
+          rdfs:label "Building"@en ,
+                     "Edificio"@it .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#CharacterPortrayal
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#CharacterPortrayal
 :CharacterPortrayal rdf:type owl:Class ;
                     owl:equivalentClass [ rdf:type owl:Restriction ;
                                           owl:onProperty :interpretationIncludedIn ;
@@ -1627,47 +1677,59 @@ A work is an abstract entity; there is no single material object one can point t
                                         ] ;
                     rdfs:subClassOf :Interpretation ;
                     rdfs:comment "Use this class to describe the interpretation of a character by a person in a manifestation or expression"@en ;
-                    rdfs:label "character portrayal" .
+                    rdfs:label "Personaggio interpretato"@it ,
+                               "character portrayal"@en .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Instrument
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Instrument
 :Instrument rdf:type owl:Class ;
             rdfs:subClassOf :Interpretation ;
-            rdfs:label "interpretation" .
+            rdfs:label "Interpretazione"@it ,
+                       "interpretation"@en .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Interpretation
-:Interpretation rdf:type owl:Class .
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Interpretation
+:Interpretation rdf:type owl:Class ;
+                rdfs:label "Interpretation" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Performance
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Performance
 :Performance rdf:type owl:Class ;
-             rdfs:subClassOf <http://purl.org/vocab/frbr/core#Manifestation> .
+             rdfs:subClassOf <http://purl.org/vocab/frbr/core#Manifestation> ;
+             rdfs:label "Performance"@en ,
+                        "Recita"@it .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Place
-:Place rdf:type owl:Class .
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Place
+:Place rdf:type owl:Class ;
+       rdfs:label "Luogo"@it ,
+                  "Place"@en .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Role
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Role
 :Role rdf:type owl:Class ;
       rdfs:subClassOf :Interpretation ;
-      rdfs:label "role" .
+      rdfs:label "role"@en ,
+                 "ruolo"@it .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#act
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#act
 :act rdf:type owl:Class ;
-     rdfs:subClassOf <http://purl.org/vocab/frbr/core#Work> .
+     rdfs:subClassOf <http://purl.org/vocab/frbr/core#Work> ;
+     rdfs:label "act"@en ,
+                "recitazione"@it .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#part
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#part
 :part rdf:type owl:Class ;
-      rdfs:subClassOf <http://purl.org/vocab/frbr/core#Work> .
+      rdfs:subClassOf <http://purl.org/vocab/frbr/core#Work> ;
+      rdfs:label "part" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#track
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#track
 :track rdf:type owl:Class ;
-       rdfs:subClassOf <http://purl.org/vocab/frbr/core#Work> .
+       rdfs:subClassOf <http://purl.org/vocab/frbr/core#Work> ;
+       rdfs:label "track" .
 
 
 ###  https://schema.org/CreativeWork
@@ -1676,55 +1738,60 @@ A work is an abstract entity; there is no single material object one can point t
 
 
 ###  https://schema.org/Organization
-<https://schema.org/Organization> rdf:type owl:Class .
+<https://schema.org/Organization> rdf:type owl:Class ;
+                                  rdfs:label "Ente"@it ,
+                                             "Organization"@en .
 
 
 ###  https://schema.org/Person
-<https://schema.org/Person> rdf:type owl:Class .
+<https://schema.org/Person> rdf:type owl:Class ;
+                            rdfs:label "Person" .
 
 
 ###  https://schema.org/character
 <https://schema.org/character> rdf:type owl:Class ;
-                               rdfs:subClassOf <https://schema.org/Person> .
+                               rdfs:subClassOf <https://schema.org/Person> ;
+                               rdfs:label "Personaggio"@it ,
+                                          "character"@en .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Azucena
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Azucena
 :Azucena rdf:type owl:NamedIndividual ,
                   <https://schema.org/character> .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Bruno_Poet
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Bruno_Poet
 :Bruno_Poet rdf:type owl:NamedIndividual ,
                      <http://xmlns.com/foaf/0.1/Person> .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Claudio_Marino_Moretti
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Claudio_Marino_Moretti
 :Claudio_Marino_Moretti rdf:type owl:NamedIndividual ,
                                  <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
                         :isChorusMaster :Il_Trovatore_RECI_6281 .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Coro_Teatro_Regio
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Coro_Teatro_Regio
 :Coro_Teatro_Regio rdf:type owl:NamedIndividual ,
                             <http://xmlns.com/foaf/0.1/Organization> ;
                    :isChorusOf :Il_Trovatore_RECI_6281 .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Giuseppe_Verdi
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Giuseppe_Verdi
 :Giuseppe_Verdi rdf:type owl:NamedIndividual ,
                          <http://xmlns.com/foaf/0.1/Person> .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Il_Conte_di_Luna
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Il_Conte_di_Luna
 :Il_Conte_di_Luna rdf:type owl:NamedIndividual ,
                            <https://schema.org/character> .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Il_Trovatore
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Il_Trovatore
 :Il_Trovatore rdf:type owl:NamedIndividual ,
                        <http://purl.org/vocab/frbr/core#Work> ;
               :hasCharacter :Azucena ,
@@ -1738,7 +1805,7 @@ A work is an abstract entity; there is no single material object one can point t
               skos:note "Per la gestione dei titoli delle opere sarebbe necessario prendere il titolo da Wikidata, in modo da avere uniformità." .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Il_Trovatore_PROD_33889
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Il_Trovatore_PROD_33889
 :Il_Trovatore_PROD_33889 rdf:type owl:NamedIndividual ,
                                   theatre:Production ;
                          <http://purl.org/vocab/frbr/core#realizationOf> :Il_Trovatore ;
@@ -1750,7 +1817,7 @@ A work is an abstract entity; there is no single material object one can point t
                          rdfs:seeAlso <http://archivi.teatroregio.torino.it/oggetti/?id=33889&b=search> .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Il_Trovatore_RECI_6281
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Il_Trovatore_RECI_6281
 :Il_Trovatore_RECI_6281 rdf:type owl:NamedIndividual ,
                                  :Performance ;
                         <http://purl.org/vocab/frbr/core#embodimentOf> :Il_Trovatore_PROD_33889 ;
@@ -1762,7 +1829,7 @@ A work is an abstract entity; there is no single material object one can point t
                         :timeOfPerformance "20:30" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Il_trovatore_RECI_6283
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Il_trovatore_RECI_6283
 :Il_trovatore_RECI_6283 rdf:type owl:NamedIndividual ,
                                  :Performance ;
                         <http://purl.org/vocab/frbr/core#embodimentOf> :Il_Trovatore_PROD_33889 ;
@@ -1773,23 +1840,23 @@ A work is an abstract entity; there is no single material object one can point t
                         :timeOfPerformance "15:00" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Intesa_Sanpaolo
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Intesa_Sanpaolo
 :Intesa_Sanpaolo rdf:type owl:NamedIndividual ,
                           <http://xmlns.com/foaf/0.1/Organization> .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Kevin_Knight
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Kevin_Knight
 :Kevin_Knight rdf:type owl:NamedIndividual .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#La_Traviata
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#La_Traviata
 :La_Traviata rdf:type owl:NamedIndividual ,
                       <http://purl.org/vocab/frbr/core#Work> ;
              :hasComposer :Giuseppe_Verdi ;
              rdfs:seeAlso <http://archivi.teatroregio.torino.it/oggetti/?id=523> .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Leo_Nucci
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Leo_Nucci
 :Leo_Nucci rdf:type owl:NamedIndividual ,
                     <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
            :isBaritoneIn :Il_Trovatore_RECI_6281 ;
@@ -1797,32 +1864,32 @@ A work is an abstract entity; there is no single material object one can point t
            <https://schema.org/birthPlace> "Castiglione dei Pepoli" .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Leo_Nucci_as_Il_Conte_di_Luna
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Leo_Nucci_as_Il_Conte_di_Luna
 :Leo_Nucci_as_Il_Conte_di_Luna rdf:type owl:NamedIndividual ,
                                         :CharacterPortrayal ;
                                :characterIsPlayedBy :Leo_Nucci ;
                                :interpretedCharacter :Il_Conte_di_Luna .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Leonora
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Leonora
 :Leonora rdf:type owl:NamedIndividual ,
                   <https://schema.org/character> ;
          :isCharacterOf :Il_Trovatore .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Manrico
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Manrico
 :Manrico rdf:type owl:NamedIndividual ,
                   <https://schema.org/character> ;
          :isCharacterOf :Il_Trovatore .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Micaela_Carosi
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Micaela_Carosi
 :Micaela_Carosi rdf:type owl:NamedIndividual ,
                          <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
                 :isSopranoIn :Il_Trovatore_RECI_6281 .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Micaela_Carosi_as_Leonora
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Micaela_Carosi_as_Leonora
 :Micaela_Carosi_as_Leonora rdf:type owl:NamedIndividual ,
                                     :CharacterPortrayal ;
                            :characterIsPlayedBy :Micaela_Carosi ;
@@ -1830,67 +1897,67 @@ A work is an abstract entity; there is no single material object one can point t
                            :interpretedCharacter :Leonora .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Orchestra_Teatro_Regio
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Orchestra_Teatro_Regio
 :Orchestra_Teatro_Regio rdf:type owl:NamedIndividual ,
                                  <http://xmlns.com/foaf/0.1/Organization> ;
                         :isOrchestraOf :Il_Trovatore_RECI_6281 .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Oscar_Cecchi
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Oscar_Cecchi
 :Oscar_Cecchi rdf:type owl:NamedIndividual ,
                        <http://xmlns.com/foaf/0.1/Person> .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Paul_Curran
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Paul_Curran
 :Paul_Curran rdf:type owl:NamedIndividual ,
                       <http://xmlns.com/foaf/0.1/Person> .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Rachel_Willis
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Rachel_Willis
 :Rachel_Willis rdf:type owl:NamedIndividual ,
                         <http://xmlns.com/foaf/0.1/Person> .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Rachel_Willis_as_Leonora
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Rachel_Willis_as_Leonora
 :Rachel_Willis_as_Leonora rdf:type owl:NamedIndividual ;
                           :characterIsPlayedBy :Rachel_Willis ;
                           :interpretedCharacter :Leonora .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Renato_Palumbo
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Renato_Palumbo
 :Renato_Palumbo rdf:type owl:NamedIndividual ,
                          <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
                 :isConductorOf :Il_Trovatore_RECI_6281 .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Salvadore_Cammarano
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Salvadore_Cammarano
 :Salvadore_Cammarano rdf:type owl:NamedIndividual ;
                      rdfs:seeAlso <http://archivi.teatroregio.torino.it/backoffice/index.php/editor/entities/EntityEditor/Edit/Screen48/entity_id/23297> .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Teatro_Comunale_Bologna
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Teatro_Comunale_Bologna
 :Teatro_Comunale_Bologna rdf:type owl:NamedIndividual ,
                                   <http://xmlns.com/foaf/0.1/Organization> ;
                          :isCostumeTailoringOf :Il_Trovatore_PROD_33889 .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Teatro_Regio
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Teatro_Regio
 :Teatro_Regio rdf:type owl:NamedIndividual ,
                        :Building .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Torino
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Torino
 :Torino rdf:type owl:NamedIndividual ,
                  :Place .
 
 
-###  https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Stagione_d'Opera_e_di_Balletto_2018-2019
-<https://raw.githubusercontent.com/pro-memoria/opereontology/master/frbr_ontology_regio#Stagione_d'Opera_e_di_Balletto_2018-2019> rdf:type owl:NamedIndividual ,
-                                                                                                                                           theatre:Season ;
-                                                                                                                                  :seasonContains :Il_Trovatore_PROD_33889 ;
-                                                                                                                                  dc:title "Stagione d'opera e di balletto 2018-2019" ;
-                                                                                                                                  <https://schema.org/genre> "opera e balletto" ;
-                                                                                                                                  rdfs:label "Stagione d'opera e di balletto 2018-2019" .
+###  https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Stagione_d'Opera_e_di_Balletto_2018-2019
+<https://raw.githubusercontent.com/pro-memoria/mutho/master/mutho#Stagione_d'Opera_e_di_Balletto_2018-2019> rdf:type owl:NamedIndividual ,
+                                                                                                                     theatre:Season ;
+                                                                                                            :seasonContains :Il_Trovatore_PROD_33889 ;
+                                                                                                            dc:title "Stagione d'opera e di balletto 2018-2019" ;
+                                                                                                            <https://schema.org/genre> "opera e balletto" ;
+                                                                                                            rdfs:label "Stagione d'opera e di balletto 2018-2019" .
 
 
 #################################################################
