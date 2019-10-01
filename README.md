@@ -9,36 +9,22 @@ Italiano | [English](README_EN.md)
 
 Benvenuto nell'implementazione ufficiale dell'ontologia mutho (music and theater ontology) sviluppata da Promemoria Group.
 Questa ontologia serve a raccogliere informazioni riguardanti le opere teatrali.
+
 Le informazioni raccolte spaziano dal compositore dell'opera, ai ballerini partecipanti, alla locazione geografica in cui si è tenuta l'opera fino ai costumisti e molto altro.
 
-# Index
-- [Tratti Distintivi](#tratti-distintivi)
-- [Ambiente di Sviluppo Utilizzato][#ambiente-di-sviluppo-utilizzato]
-- [Download Ontology](#download-ontology)
-- [Download Release](#download-release)
-- [Build from Source Code](#build-from-source-code)
-- [Run Ontology](#run-ontology)
+Per maggiori informazioni, consuktare la nostra pagina Wiki al link --> https://github.com/pro-memoria/mutho/wiki
 
-## Tratti Distintivi
+## SCOPO ONTOLOGIA
 
-L'ontologia è stata sviluppata mediante riferimenti ad ontologie esterne.
+Lo scopo principale di questa ontologia è quello di rendere navigabile, ricercabile e attraente la cronologia delle produzioni dei teatri d’opera italiani (potenzialmente il progetto potrebbe essere esteso ai teatri di prosa).
 
-Occorre far presente che l'ontologia da cui abbiamo preso spunto per lo sviluppo è Doremus Ontology  (DOing REusable MUSical data).
-Questa ontologia serve per catalogare e registrare informazioni riguardanti la musica (autore,genere,durata ecc..).
-Basata su ontologie già esistenti come FRBR (Functional Requirements for Bibliographic Records) e CIDOC, un'ontologia che descrive il dominio dei beni culturali, nella prospettiva dei musei.
-Come nel caso di Doremus Ontology sono state utilizzati riferimenti ad ontologie esterne come FRBR, schema.org, FOAF, lukeBlaney.
+Per entità autoriali si intende l’elenco delle persone, dei personaggi, stagioni e delle composizioni.
 
-FRBR è un'ontologia utile a dare una rappresentazione semi-formale delle informazioni bibliografiche.
-Da questa ontologia sono state importate alcune classi e relazioni come ad esempio la classe Endeavour (che rappresenta un qualsiasi prodotto di impresa artistica o creativa).
+Lo scopo principale del progetto è quello di aggregare, a partire dagli autori e dalle opere, gli spettacoli (produzioni e recite) prodotti da tutti gli enti teatrali che vorranno condividere la loro banca dati. 
 
-L'ontologia esterna FOAF (acronimo di friend of a friend) viene utilizzata principalmente per descrivere persone, con le loro attività e le relazioni con altre persone e oggetti.
-Da questa ontologia sono state importate alcune classi e relazioni come ad esempio la classe Organization.
 
-L'ontologia esterna schema.org è uno schema di markup di dati strutturati supportato dai motori di ricerca, nato da Google, Yahoo! e Microsoft. Grazie a questo schema, i motori di ricerca avranno modo di capire meglio le informazioni presenti nelle pagine web.
-Schema.org è stata dunque utilizzata per facilitare la reperibilità dei dati riguardanti l'ontologia dai principali motori di ricerca.
-Da questa ontologia sono state importate alcune classi e relazioni come ad esempio la classe Organization (impostata poi come equivalente alla classe Organization della ontologia esterna FOAF).
+## PROMEMORIA GROUP 
 
-Abbiamo importato anche alcune classi e relazioni dall'ontologia esterna fornita dall'autore Luke Blaney usata per descrivere ed organizzare dati riguardanti le opere teatrali.
-Da questa ontologia sono state importate alcune classi e relazioni come ad esempio la classe Season (descrive il concetto di stagione nelle produzioni delle opere teatrali).
+Promemoria Group realtà italiana specializzata nel recuperare, conservare e valorizzare a 360° il patrimonio storico di grandi aziende, istituzioni e collezionisti.
+Visita il nostro sito web --> https://www.promemoriagroup.com/it
 
-## Ambiente di Sviluppo Utilizzato
