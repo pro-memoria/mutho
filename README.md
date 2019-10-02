@@ -1,4 +1,4 @@
-<h1 align="center"># MUTHO</h1>
+<h1 align="center">MUTHO</h1>
 <h4 align="center">Reasoner da utilizzare: HermiT 1.4.3.456 
   
    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">MUTHO</span> di <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/pro-memoria/mutho" property="cc:attributionName" rel="cc:attributionURL">Promemoria s.r.l.</a> è distribuito con Licenza <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribuzione - Condividi allo stesso modo 4.0 Internazionale</a>
@@ -23,7 +23,7 @@ Per entità autoriali si intende l’elenco delle persone, dei personaggi, stagi
 Lo scopo principale del progetto è quello di aggregare, a partire dagli autori e dalle opere, gli spettacoli (produzioni e recite) prodotti da tutti gli enti teatrali che vorranno condividere la loro banca dati. 
 
 
-## PROMEMORIA GROUP 
+## PROMEMORIA 
 
 Promemoria Group realtà italiana specializzata nel recuperare, conservare e valorizzare a 360° il patrimonio storico di grandi aziende, istituzioni e collezionisti.
 Visita il nostro sito web --> https://www.promemoriagroup.com/it
