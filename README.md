@@ -9,24 +9,23 @@ MUTHO
 
 Italiano | [English](README_EN.md)
 
-Benvenuto nell'implementazione ufficiale dell'ontologia MUTHO (Music and Theater Ontology) sviluppata da Promemoria.
-Questa ontologia descrivere il Teatro dell'Opera e Operetta italiano mettendo al centro la definizione delle cronologie teatrali.
+Questa è l'implementazione, sviluppata da Promemoria, dell'ontologia MUTHO (Music and Theater Ontology) per descrivere il Teatro dell'Opera e Operetta italiano.
 
-Le informazioni raccolte spaziano dal compositore dell'opera, ai ballerini partecipanti, alla locazione geografica in cui si è tenuta l'opera fino ai costumisti e molto altro.
+Le informazioni descritte spaziano dal compositore di un'opera, ai ballerini partecipanti, alla locazione geografica in cui si è tenuta l'opera fino ai costumisti e molto altro, ma ogni descrizione ha come centro la definizione delle cronologie teatrali come possono esserlo le recite e le stagioni dell'Opera
 
-Per maggiori informazioni, consuktare la nostra pagina Wiki al link --> https://github.com/pro-memoria/mutho/wiki
+Per maggiori informazioni, consultare la nostra pagina Wiki al link --> https://github.com/pro-memoria/mutho/wiki
 
 ## SCOPO DELL'ONTOLOGIA
 
-Lo scopo principale di questa ontologia è quello di rendere navigabile, ricercabile e attraente la cronologia delle produzioni dei teatri d’opera italiani (potenzialmente il progetto potrebbe essere esteso ai teatri di prosa).
+Lo scopo principale di questa ontologia è quello di rendere navigabile, ricercabile e attraente la cronologia delle produzioni dei teatri d’opera italiani (potenzialmente il progetto potrebbe essere esteso ai teatri di prosa) al fine di creare un archivio di entità autoriali sul mondo del teatro d'opera liberamente accessibile e navigabile.
 
 Per entità autoriali si intende l’elenco delle persone, dei personaggi, stagioni e delle composizioni.
 
-Lo scopo principale del progetto è quello di aggregare, a partire dagli autori e dalle opere, gli spettacoli (produzioni e recite) prodotti da tutti gli enti teatrali che vorranno condividere la loro banca dati. 
+Nella visione pià ampia del progetto si cerca di aggregare, a partire dagli autori e dalle opere, gli spettacoli (produzioni e recite) prodotti da tutti gli enti teatrali che vorranno partecipare e condividere la loro banca dati. 
 
 
 ## PROMEMORIA 
 
 Promemoria è una realtà italiana specializzata nel recuperare, conservare e valorizzare a 360° il patrimonio storico di grandi aziende, istituzioni e collezionisti.
-Visita il nostro sito web --> https://www.promemoriagroup.com/it
+Visita il nostro sito web --> https://www.promemoriagroup.com/
 
