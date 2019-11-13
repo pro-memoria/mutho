@@ -902,6 +902,10 @@
         <Class IRI="https://schema.org/Person"/>
         <Class IRI="http://purl.org/vocab/frbr/core#ResponsibleEntity"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://schema.org/character"/>
+        <Class IRI="#Interpretation"/>
+    </SubClassOf>
     <DisjointClasses>
         <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
         <Class IRI="http://purl.org/vocab/frbr/core#Item"/>
